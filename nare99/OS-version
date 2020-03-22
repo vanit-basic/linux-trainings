@@ -1,0 +1,3 @@
+
+hostnamectl >file1
+grep -i "operating system" ./file1
