@@ -1,0 +1,2 @@
+
+grep -i "kernel" ./file1
