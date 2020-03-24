@@ -7,13 +7,13 @@ int f(int a) {
 
 void print () {
 	std::cout << "Some text1" << std::endl;
-	std::cout << "Some tex2" << std::endl;
+	std::cout << "Some text2" << std::endl;
 	std::cout << "Some text3" << std::endl;
 	std::cout << "Some text4" << std::endl;
-	std::cout << "Some text555" << std::endl;
+	std::cout << "Some text5" << std::endl;
 	std::cout << "Some text6" << std::endl;
 	std::cout << "Some text7" << std::endl;
-	std::cout << "Some text8" << std::endl;
+	std::cout << "Some text88" << std::endl;
 	std::cout << "Some text9" << std::endl;
 	std::cout << "Some text10" << std::endl;
 }
