@@ -1,2 +1,0 @@
-grep -i "cpu cores" /proc/cpuinfo |awk '{print $2 " " $4}' >file3
- sed -n '2p' ./file3
