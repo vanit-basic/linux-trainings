@@ -1,4 +1,5 @@
 #include <iostream>
+#include "func.hpp"
 
 int f(int a) {
 	return 10 * a;
