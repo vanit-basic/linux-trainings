@@ -1,6 +1,7 @@
 #!/bin/bash
 
-check() {
+
+info() {
 
         cat /proc/version > Info
 	awk '{print $1}' Info > OS
@@ -11,7 +12,7 @@ check() {
 	echo "cpu model -" `cat /proc/cpuinfo | grep model | grep name | uniq | awk '{print $4,$5,$6,$7,$9}'`
 	echo "cores are" `cat /proc/cpuinfo | grep 'core id' | awk 'END { print NR }'`
 	echo "Kernel version -" `uname -r`
-
+	
 }
-check
+info
 
