@@ -1,1 +1,0 @@
-grep -i "$UID" /etc/passwd | cut -d":" -f1 
