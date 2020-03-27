@@ -7,4 +7,4 @@ read -p "enter something:" x
                  else  echo "command is not found"
                 fi
                  done
-
+#go
