@@ -21,4 +21,6 @@ path=""
                 echo $path
         else
                 echo "command is not found"
+        fi;
+
 
