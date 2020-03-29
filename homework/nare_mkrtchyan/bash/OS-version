@@ -1,2 +1,0 @@
-
-hostnamectl | grep -i "operating system" | awk '{print $3 " " $4 " " $5}'
