@@ -1,8 +1,0 @@
- grep -w "VERSION" /etc/os-release
- echo "username:" $USER
- grep "model name" /proc/cpuinfo | sort -u
- grep "cores" /proc/cpuinfo | sort -u
- uname -r
-
-
-
