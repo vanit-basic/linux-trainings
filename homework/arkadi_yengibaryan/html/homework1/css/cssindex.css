@@ -1,0 +1,12 @@
+body {
+    font-family: Arial;
+    border: none;
+}
+button {
+    padding: 5px 10px;
+}
+img {
+    width: 100%;
+    max-height: 330px;
+    padding: 30px 70px 10px 70px;
+}
