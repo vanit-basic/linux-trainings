@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>My second page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>My second page</title>
 </head>
 <body>
-<div style="display:inline;">
-<div style="height:300px; width:600px;">
-<h2 style="color:red">Add Gmail to your Google Account</h2>
-<p>By completingthis form, you're upgrading to Gmail, email from Google. Gmail works on any device, blocks spam, and much more.</p>
-<p>You'll be able to sign in using your new Gmail address, whichwill become the primary email address associated with this account. We'll send account updates, invitations, and other notifications to your Gmail address.</p>
-<p>tatev96mar2mail.ru will become an <a href="">alternate email address</a> on this account, and you'll still be anle to sign in with it.</p>
-<p>If you prefer, you can create a <a href="">new Google Account </a> with email, and leave this one as-is.</p>
-</div>
-<div style="background-color:silver; height:400px; width:350px; padding:40px;">
-<form>
-<p><b>Name</b></p>
-<p><input type="text" style="width:150px">
-<input type="text" style="width:150px"></p>
-<p><b>Choose your Gmail address</b></p>
-<p><input type="email" style="width:320px;" placeholder="@gmail.com"></p>
-<p><b>Mobile phone</b></p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/2000px-Flag_of_Armenia.svg.png"style=" width:40px; height:20px;">
-<input type="tel"></p>
-<p><b>Your current emaill address</b></p>
-<p><input type="email" style="width:320px;"></p>
-<p><input type="submit" style="background-color:blue; color:white; height:50px; width:100px; margin-left:230px;" value="Submit"></p>
-</form>
-
-</div>
-</div>
-
+    <div class="conteiner">
+        <div class="google_account">
+            <h2 style="color:red">Add Gmail to your Google Account</h2>
+            <p>By completingthis form, you're upgrading to Gmail, email from Google. Gmail works on any device, blocks spam, and much more.</p>
+            <p>You'll be able to sign in using your new Gmail address, whichwill become the primary email address associated with this account. We'll send account updates, invitations, and other notifications to your Gmail address.</p>
+            <p>tatev96mar2mail.ru will become an <a href="">alternate email address</a> on this account, and you'll still be anle to sign in with it.</p>
+            <p>If you prefer, you can create a <a href="">new Google Account </a> with email, and leave this one as-is.</p>
+        </div>
+        <div class="choose_gmail">
+            <form>
+                <p><b>Name</b></p>
+                <p><input type="text" class="name_surname_input">
+                    <input type="text" class="name_surname_input"></p>
+                <p><b>Choose your Gmail address</b></p>
+                <p><input type="email" placeholder="@gmail.com" class="phone_gmail_input"></p>
+                <p><b>Mobile phone</b></p>
+                <select>
+                    <option value="ARM">+374</option>
+                    <option value="RUS">+7</option>
+                    <option value="USA">+699</option>
+                </select>
+                <input type="phone" class="tel"></p>
+                <p><b>Your current emaill address</b></p>
+                <p><input type="email" class="phone_gmail_input"></p>
+                <p><input type="submit" class="btn" value="Submit"></p>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
-

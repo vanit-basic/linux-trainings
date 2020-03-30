@@ -1,0 +1,47 @@
+.conteiner {
+    display: flex;
+    margin-top: 0px;
+    margin-left: 100px;
+    font-family: Arial Narrow, sans-serif;
+}
+.google_account {
+    height: 300px;
+    width: 550px;
+    padding: 70px;
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+.choose_gmail {
+    margin-top: 130px;
+    background-color: #FFFFF0;
+    height: 360px;
+    width: 320px;
+    padding: 30px;
+    box-shadow: 0 0 1px;
+    border: 0px solid black;
+}
+.name_surname_input {
+    width: 150px;
+    height: 20px;
+}
+.phone_gmail_input {
+    width: 310px;
+    height: 20px;
+}
+.phone_gmail_input::placeholder {
+    text-align: right;
+}
+.tel {
+    width: 250px;
+    height: 20px;
+}
+.btn {
+    background-color: #4169E1;
+    color: white;
+    height: 40px;
+    width: 80px;
+    margin-left: 230px;
+    border-radius: 5px;
+}
