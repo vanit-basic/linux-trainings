@@ -2,10 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<ti><style>
+<tiile>Add your Gmail Account></title>
+  <style>
 body {
   body {font-family: Arial, Helvetica, sans-serif;}
 }
+
     * {box-sizing: border-box;}
     input[type=text], select, textarea {
   width: 100%;
@@ -21,7 +23,7 @@ body {
 input[type=submit] {
   background-color: blue;
   color: white;
-  padding: 12px 20px;
+  padding: 16px 30px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -67,43 +69,50 @@ input[type=submit]:hover {
     width: 150px;
     border-radius: 50%;
 }
+div {
+  border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
 </style>
 </head>
 <body>
 
-<div class="split left">
-  <div class="centered">
+<div1 class="split left">
+  <div1 class="centered">
     <h2 style="color:red">Add Gmail to your Google Account</h2>
 
-      <p>By completing this form, you're uograding Gmail, email from Google, Gmail works on  any,
-        device, blocks spam and much more
+      <p>By completing this form, you're uograding Gmail, email from Google, Gmail works on any,
+        device, blocks spam and much more<br>
         You'll able to sign in using your new Gmail adress, which will become the primary email
-        adress associated with this account. We'll sent email updates, invitations, and other notifications on your Gmail
-        hasmik_n@instigatemobile.com will become an alternate email adress on this account,       sand you'll still be able to sign in with it.<br>
+        adress associated with this account. We'll sent email updates, invitations, and other notifications on your Gmail<br>
+        hasmik_n@instigatemobile.com will become an alternate email adress on this account,
+        sand you'll still be able to sign in with it.<br>
         If you prefer, you can create a new Google Account with email and leave this one as-is
       </p>
-  </div>
-</div>
+  </div1>
+</div1>
 <div class="container">
 
 <div class="split right">
     <div class="centered">
       <form action="/action_page.php">
-          Name:<br>
-          <input type="text">
-          <input type="text"><br> <br>
-          Choose your email adress:
-          <input type="text" name="Choose your Gmail adress" value="@gmail.com" width="400" height="400">
-          <br><br>
-          Mobile Phone:
-          <input type="text" name="Mobile Phone" value="+374" width="400" height="400"><br><br>
-          Your corrent email adress:
-          <input type="text" name="Your corrent email adress" value="" width="400" height="400"><br><br>
-          <input type="submit">
-          </form>
+        <label for="ffname">Name</label>
+      <input type="text" id=fname" name="name" placeholder="Your name..">
+      <input type="text" id="lname" name="surname" placeholder="Your surname..">
+  
+      <label for="Gmail">Choose your Gmail adress</label>
+      <input type="text" id="Gmail" name="Choose your Gmail adress" placeholder=@gmail.com>
+    <label for="Mobile Phone">Mobile Phone</label>
+      <input type="text" id="Mobile Phone" name="Mobile Phone" placeholder=+374></input>
+          <label for="email">Your correct email adress</label>
+              <input type="text" id="email" name="Your correct email adress"></input>
+              <input type="submit" value="Submit">
+
+        </form>
             </div>
   </div>
-     </div>
+     </div>s
 </body>
 </html> 
 
