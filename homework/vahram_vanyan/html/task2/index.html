@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>my first page</title>
 </head>
 
@@ -49,17 +49,19 @@
         <script>
             function myFunction() {
               let x = document.getElementById("phone1");
+              debugger
               if (x.value=="+374") {
                   x.style.backgroundImage='url("images/1.png")';
               }
-              if (x.value=="+266") {
+              else if (x.value=="+266") {
                   x.style.backgroundImage='url("images/2.png")';
               }
-              if (x.value=="+255") {
-                  x.style.backgroundImage='url("images/4.png")';
+              else if (x.value=="+255") {
+                  x.style.backgroundImage='url("images/3.png")';
               }
               else {
-                  x.style.backgroundImage='url("images/armenia-flag-3d-icon-16.png")';
+                  debugger
+                  x.style.backgroundImage='url("images/4.png")';
               }
             }
         </script>
