@@ -1,1 +1,1 @@
-Linux Trainings
+Linux trainings
