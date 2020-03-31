@@ -1,0 +1,22 @@
+#username{
+        border: 1px  solid #ccc;
+border-radius: 1px;
+  margin-left: 465px;
+ margin-bottom: 3px;
+ margin-top: 3px;
+}
+#password{
+border: 1px  solid #ccc;
+ border-radius: 1px;
+  margin-left: 465px;
+  margin-bottom: 3px;
+ margin-top: 3px;
+}
+.button{
+  border: 1px  solid #ccc;
+  margin-left: 465px;
+  margin-top: 7px;
+}
+#u{
+margin-left: 465px;
+}
