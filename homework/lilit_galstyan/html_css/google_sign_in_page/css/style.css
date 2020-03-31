@@ -1,0 +1,56 @@
+.button{
+        color: #4E4EC6;
+        text-decoration: none;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px  solid #ccc;
+  border-radius: 1px;
+  box-sizing: border-box;
+}
+.n{
+font-family: Gill Sans, sans-serif;
+font-size: 90%;
+}
+input[type=submit] {
+  width: 20%;
+  color: white;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+input[type=submit] {
+  background-color: #4E4EC6;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 275px;
+}
+#second {
+  border-style: insent;
+  border-radius: 1px;
+  margin-top: 65px;
+  margin-bottom: 100px;
+  margin-right: 40px;
+  margin-left: 80px;
+  background-color: #F2F2F2;
+ }
+ #second {
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+ }
+ .sansserif{
+ font-family: Verdana, Geneva, sans-serif;
+ font-size: 90%;
+ }
+ .a{
+ font-family: Verdana, Geneva, sans-serif;
+ font-size: 130%;
+ }
+#gmail{
+text-align: right;
+}
