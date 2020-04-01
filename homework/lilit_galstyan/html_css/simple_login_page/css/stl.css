@@ -1,22 +1,60 @@
+#image{
+margin-left:37%;
+}
+
+
 #username{
-        border: 1px  solid #ccc;
-border-radius: 1px;
-  margin-left: 465px;
- margin-bottom: 3px;
- margin-top: 3px;
+  border: 1px  solid #ccc;
+  border-radius: 1px;
+  margin-left: 30%;
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
+}
+
+
+
+#username{
+        padding-right:25%;
+        padding-bottom:1%;
+        padding-top:1%;
+}
+
+#password{
+
+  border: 1px  solid #ccc;
+  border-radius: 1px;
+  margin-left: 30%;
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
 }
 #password{
-border: 1px  solid #ccc;
- border-radius: 1px;
-  margin-left: 465px;
-  margin-bottom: 3px;
- margin-top: 3px;
+        padding-right:25%;
+        padding-bottom:1%;
+        padding-top:1%;
 }
+
+
+.button{
+  color: white;
+  background-color: rgb(76,175,80) ;
+
+}
+
 .button{
   border: 1px  solid #ccc;
-  margin-left: 465px;
-  margin-top: 7px;
+  border-radius: 1px;
+  margin-left: 30%;
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
 }
-#u{
-margin-left: 465px;
+
+.button{
+  padding-left:19%;
+  padding-right: 19%;
+  padding-bottom:1%;
+  padding-top:1%;
 }
+#data{
+margin-left: 30%;
+}
+
