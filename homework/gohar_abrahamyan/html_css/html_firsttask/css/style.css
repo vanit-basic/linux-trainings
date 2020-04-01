@@ -3,29 +3,35 @@
 	padding: 0;
 }
 body{
-	width: 680px;
-	height: 660px;
-	margin: 0 auto;
+	width: 100%;
 }
 #content {
 	border: 2px solid #f1f1f1;
+	width: 50%;
 	margin-top: 10px;
 	padding-top: 40px;
 	
 }
 img {
-	margin-left: 165px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 50%;
+}
+.registrform {
+	padding: 20px;
 }
 input {
-	margin: 5px 15px;
-	width: 640px;
-	height: 45px;
-	
-}
-label {
-	font-weight: bold;
-	font-size: 18px;
-	margin-left: 15px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px auto;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}	
+ label {
+	font-weight: bolder;
+	font-size: 15px;
 }
 input[type=submit] {
   background-color: #4caf50;
