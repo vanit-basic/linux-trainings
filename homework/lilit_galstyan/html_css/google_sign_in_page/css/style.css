@@ -1,56 +1,93 @@
 .button{
-        color: #4E4EC6;
+        color: #4e4ec6;
         text-decoration: none;
 }
+
 input[type=text], select {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px  solid #ccc;
-  border-radius: 1px;
-  box-sizing: border-box;
+width: 100%;
+padding: 10px 20px;
+margin: 4% 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 1px;
+box-sizing: border-box;
 }
-.n{
+
+.datas{
 font-family: Gill Sans, sans-serif;
 font-size: 90%;
+
 }
-input[type=submit] {
-  width: 20%;
-  color: white;
-  border: none;
-  border-radius: 1px;
-  cursor: pointer;
+
+
+#datas{
+background-color:rgb(241, 241, 241) ;
+
 }
-input[type=submit] {
-  background-color: #4E4EC6;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-left: 275px;
-}
+
 #second {
-  border-style: insent;
+  color: black;
   border-radius: 1px;
-  margin-top: 65px;
-  margin-bottom: 100px;
-  margin-right: 40px;
-  margin-left: 80px;
+  margin-top: 4%;
+  margin-left: 7%;
   background-color: #F2F2F2;
  }
- #second {
-  padding-top: 25px;
-  padding-right: 30px;
-  padding-bottom: 15px;
-  padding-left: 30px;
+#second {
+  margin-right: 15%;
+  margin-bottom: 1%;
  }
- .sansserif{
+
+
+ .text{
  font-family: Verdana, Geneva, sans-serif;
  font-size: 90%;
+ color: #565656;
+ margin-left: 10%;
  }
- .a{
+
+
+ .title{
  font-family: Verdana, Geneva, sans-serif;
  font-size: 130%;
+ color: red;
+ width: 50%;
+ margin-left: 10%;
  }
-#gmail{
+
+#mail{
 text-align: right;
+width:100%;
 }
+#name{
+width:49%;
+}
+
+#submit{
+        border-radius:2px;
+        background-color: #2378F9;
+        color:white;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        padding-right: 2%;
+        padding-left: 2%;
+        margin-left:80%;
+        border: none;
+}
+
+
+.phone{
+font-family: Gill Sans, sans-serif;
+font-size: 90%;
+
+
+}
+
+#phone{
+background-image:url('https://image.flaticon.com/icons/svg/206/206744.svg');
+width:100%;
+background-position: 5%;
+background-size:7%;
+background-repeat:no-repeat;
+
+}
+
