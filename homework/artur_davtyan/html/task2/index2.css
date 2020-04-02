@@ -1,0 +1,58 @@
+
+#container{
+    display: flex;
+
+
+}#container1{
+    width: 50%;
+    height: 50%;
+
+
+}
+#margin2{
+    margin-left: 10%;
+}
+
+#container2{
+    background-color:green ;
+    width: 50%;
+   height: 100%;
+   margin-left:50%;
+
+}
+#fname{
+    width: 25%;
+}
+#iname{
+    width: 25%;
+}
+#gmail{
+    width: 55%;
+    text-align: right;
+}
+#display{
+    width: 15%;
+}
+#mobile{
+    width: 38%;
+}
+#email{
+    width:54% ;
+    text-align: right;
+}
+#submit{
+padding: 2%;
+margin-left: 40%;
+}
+#submit2{
+    color: white;
+    background-color: rgb(74,115,245);
+
+
+}.text{
+
+    font-size: 14px;
+    padding: 10px 100px;
+}#colorh2{
+color: red;
+}
