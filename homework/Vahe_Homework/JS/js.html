@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>learnJS</title>
+		<meta charset = "utf8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel = "stylesheet" type = "text/css" href = "js.css"/>
+	</head>
+	<body>
+	<form >
+		<h4>Ответив на три ответа + 50 очков.Не отвечаешь на какой либо вопрос 0 очков.</h4>
+		<h4 class = "h4">Сколько океанов на нашей планете? </h4>
+	     <input type = "text" name = "question1" class = "inp"  id = "input1" value="6" /><br><br><br>
+		<h4 class = "h4">Самая грязная река на нашей планете։<br> 1)Амазон <br> 2)Цитарум <br> 3)Дебет</h4>
+		<input type = "text" name = "question2" class = "inp"   id = "input2" value="3"/><br>
+		<h4 class = "h4">Сколько хромосом в геноме человека?<br> 1)47 <br> 2)46 <br> 3)2</h4>
+		<input type = "text" name = "question3" class = "inp"  id = "input3" value="3"/><br>
+		<button class = "button" onclick = "check()">Go</button>
+		
+	</form>
+	<script>
+			function check() {
+			let b = document.getElementById('input1').value; 
+			let c = document.getElementById('input2').value;
+			let d = document.getElementById('input3').value;
+			let answers = [b,c,d];
+			let rightAnswer = [5,2,2];
+			let points = 0;
+			let a = prompt('Please enter password','invalidPassword');
+				if(a === 'programm'){
+					if (b == 5 && c == 2 && d == 2 ){
+						points =+ 50
+						alert (points);
+					} else {
+						alert(points);
+					}
+					//for (let i = 0; i < 3 ; i++ ){ 
+					//		let cache = answers [i];
+					//		let cache1 = rightAnswer [i];
+					//		if (cache == cache1){
+					//			points = points + 10;
+					//		}
+					//	}
+					//alert( "Welcome you have " +  points + "points");
+					}
+				 else {
+					alert("Invalid password");
+					}
+			}
+	
+	</script>
+	</body>
+</html>
