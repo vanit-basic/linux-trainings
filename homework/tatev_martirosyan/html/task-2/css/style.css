@@ -1,47 +1,61 @@
-.conteiner {
-    display: flex;
-    margin-top: 0px;
-    margin-left: 100px;
+.row {
+    margin-top: 10%;
+    margin-left: 10%;
     font-family: Arial Narrow, sans-serif;
 }
-.google_account {
-    height: 300px;
-    width: 550px;
-    padding: 70px;
+@media screen and (max-width: 600px) {
+ 
+  .col-xs-6 {   
+   width:80%;
+  }
+  .col-xs-4{
+      width:80%;
+  }
+}
+h2 {
+color:red;
 }
 a {
     color: blue;
     text-decoration: none;
 }
-.choose_gmail {
-    margin-top: 130px;
+#choose_gmail {
+    margin:2%;
+    margin-top: 5%;
     background-color: #FFFFF0;
-    height: 360px;
-    width: 320px;
-    padding: 30px;
     box-shadow: 0 0 1px;
     border: 0px solid black;
+    
 }
 .name_surname_input {
-    width: 150px;
-    height: 20px;
+    width: 47%;
+    height: 30px;
+}
+.for_marg {
+margin:6%;
 }
 .phone_gmail_input {
-    width: 310px;
-    height: 20px;
+    width: 94%;
+    height: 30px;
 }
 .phone_gmail_input::placeholder {
     text-align: right;
+padding-right:5%;
 }
 .tel {
-    width: 250px;
-    height: 20px;
+    width: 77%;
+    height: 30px;
+margin-left:15%;
 }
-.btn {
+.btn {margin:2%;
     background-color: #4169E1;
     color: white;
     height: 40px;
-    width: 80px;
-    margin-left: 230px;
+    width: 25%;
+    margin-left:63%;
     border-radius: 5px;
+}
+.select_tel{
+    height: 30px;
+    position:absolute;
 }
