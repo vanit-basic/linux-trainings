@@ -1,16 +1,12 @@
 body {
     font-family: Arial;
 }
-.continer {
-    margin: auto;
-    margin-top: 35px;
-}
 .head {
     margin-bottom: 25px;
-    margin-left: 52px;
+    margin-left: 95px;
     color: red;
 }
-.left_bar_text {
+.left_bar p {
     font-size: 18px;
     text-align: justify;
     
@@ -19,26 +15,26 @@ body {
     max-width: 360px;
     background-color: #f1f1f1;
 }
-.form {
+.right_bar_form {
     margin: 20px 10px;
 }
-label {
+.right_bar_form label {
     font-weight: bold;
     font-size: 14px;
 }
-.name {
+.right_bar_form_name {
     background: url(../img/name_atribut.png) no-repeat;
     background-position: 130px;
     background-color: #fff;
     margin-right: 10px;
 
 }
-.email {
-    display: block;
-}
-.email::placeholder {
+.right_bar_form_email::placeholder {
     text-align: right;
 }
-button {
-    margin-bottom: 20px;
+.dropdown button {
+    background: #ffffff;
+}
+.d-flex img ,a {
+    margin-left: 12px;
 }
