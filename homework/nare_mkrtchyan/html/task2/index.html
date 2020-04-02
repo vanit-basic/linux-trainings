@@ -2,46 +2,67 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Second task</title>
-<link rel="stylesheet" type="text/css" href="task2.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/task2.css">
+
 </head>
 
 <body>
-<div class="nav">
-<form>
-<label for "flname"><b>Name</b></label><br>
-<input type="text" class="fn"/>
-<input type="text" class="ln"/><br>
-<br>
-<br>
-<label><b>Choose your Gmail address</b></label><br>
-<input type="mail" placeholder="@gmail.com"><br>
-<br>
-<label><b>Mobile phone</b></label><br>
-<select>
-<option value="arm">Armenia: +374</option>
-
-<option value="au">Austria: +43</option>
-
-<option value="ger">Germany: +49</option>
-</select>
-<input type="text" >
-<br>
-<label><b>Your current email address</b></label><br>
-<input type="mail" ><br>
-<br>
-
-<input type="submit" value="Submit" class="button">
-</form>
-</div>
-
-<div class="nl">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-7">
+<div class="m-3">
 <h2>Add Gmail to your Google Account</h2><br>
 <p>By completing this form, you're upgrading to Gmail, email from Google. Gmail works on any device, blocks spam, and much more.</p>
 <p>You'll be able to sign in using yourr new Gmail address, which will become the primary email addres associated with this account, We'll send account updates, invitations, and other notifications to your Gmail address.</p>
 <p>hasmik_n@instigatemobile.com will become an <a href="https://support.google.com/accounts/answer/176347" target="_blank">alternate email address</a> on this account, and you'll still be able to sign in with it.</p>
 <p>If you prefer, you can create a new Google Account with email, and leave this one as-is.</p></div>
-
+</div>
+<div class="col-sm-4">
+<div class="m-3">
+<form>
+<div class="form-group">
+<label for "flname"><b>Name</b></label>
+<div class="row">
+<div class="col">
+<input type="text"  class="form-control">
+</div>
+<div class="col">
+<input type="text" class="form-control" >
+</div>
+</div>
+</div>
+<div class="form-group">
+<label><b>Choose your Gmail address</b></label>
+<input type="mail" class="form-control" placeholder="@gmail.com">
+</div>
+<label><b>Mobile phone</b></label>
+ <div class="input-group mt-1 mb-5">
+  <div class="input-group-prepend">
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+      <img src="../../images/armenia.png">
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item"><img src="../../images/armenia.png"></a>
+      <a class="dropdown-item"><img src="../../images/austria.png"></a>
+      <a class="dropdown-item"><img src="../../images/germany.png"></a>
+    </div>
+  </div>
+  <input type="text" class="form-control">
+</div> 
+<div class="form-group">
+<label><b>Your current email address</b></label>
+<input type="email" class="form-control" id="email" name="email" >
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+</div>
 </body>
-</html>
+<html>
