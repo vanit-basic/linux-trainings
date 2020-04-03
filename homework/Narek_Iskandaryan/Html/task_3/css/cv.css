@@ -204,7 +204,9 @@ hr {
     border-top: 1px solid #767270ab;
 }
 
-
+/*
+@media
+*/
 
 
 @media screen and (max-width: 768px) {
@@ -212,5 +214,21 @@ hr {
       max-width: none;
       margin-left: 0;
       text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .left_part {
+      max-width: none;
+      text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .left_part .row .col-md-10 {
+      max-width: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .left_part .row .col-md-10 p {
+      margin: 0;
   }
 }
