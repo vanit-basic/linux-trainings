@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>my first page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center p-3">
+            <div class="col-sm-7">
+                <h2 class="m-1">Ցանկանում եք խաղալ վիկտորինա ?</h2>
+                <button id="start" class=" m-2 btn btn-primary" onclick="start_viktorina()">Այո սկսենք</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function start_viktorina() {
+            let start=confirm('Խաղը սկսվեց: Խնդրում ենք պատասխանել գրական հայերենով:');
+            if(start) {
+                let userName = prompt('Մուտքագրեք Ձեր անունը:');
+                if(!userName) userName= "մասնակից";
+                let point=getRezult();
+                alert(`հարգելի ${userName} վաստակեցիք ${point} միավոր`);
+            }
+        }
+        function getRezult() {
+            let point=0;
+            let trueResult=['Ամազոն','Ռուսաստան','Բայկալ','Էվերեստ','Չինաստան','1941','լուսին','49', 'Օբամա', 'Բրազիլիա'];
+            let userResult=[]
+            let promptArg=['Աշխարհի ամենաերկար գետը :','Աշխարհի տարածքով ամենամեծ պետությունը :','Աշխարհի ամենախոր լիճը :', 'Աշխարհի ամենաբարձր լեռը :','Աշխարհի ամենամեծ բնակչությամբ երկիրը :','Երբ է տեղի ունեցել երկրորդ հայրենական պատերազմը ','Երկիր մոլորակի արբանյակը :','Հաշվել արտահայտության արժեքը 25*25-24*24 :','ԱՄՆ նախկին նախագահի ազգանունը :','Բրազիլիայի մայրաքաղաքը :'];
+
+            for (let i = 0; i < promptArg.length; i++) {
+                userResult.push(prompt(promptArg[i]));                
+            }
+            for (let i = 0; i < trueResult.length; i++) {
+                if (trueResult[i].toLowerCase()===userResult[i].toLowerCase()) {
+                    point+=1;
+                }
+            }
+            return point;
+        }
+    </script>
+</body>
+
+</html>
