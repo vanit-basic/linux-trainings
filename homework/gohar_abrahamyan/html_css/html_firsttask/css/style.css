@@ -1,0 +1,40 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+body{
+	width: 100%;
+}
+#content {
+	border: 2px solid #f1f1f1;
+	width: 50%;
+	margin-top: 10px;
+	padding-top: 40px;
+	
+}
+img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 50%;
+}
+.registrform {
+	padding: 20px;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px auto;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}	
+ label {
+	font-weight: bolder;
+	font-size: 15px;
+}
+input[type=submit] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
