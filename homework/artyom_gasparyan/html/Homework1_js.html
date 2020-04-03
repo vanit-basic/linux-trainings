@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My the first example from javascript by Artyom</h2>
+<p>1.Please, Touch the sqreen. What time is it now? </p>
+<script> document.write(Date());    </script><br><br>
+
+<p>2.Click the button to loop and will see to sqreen natural numbers.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var text = "";
+  var i;
+  for (i = 1; i < 11; i++) {
+    text += "The natural number is " + i + "<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script><br><br>
+
+
+<p>3.Please input a number that is natural number:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction3()">Click</button>
+
+<p id="id3"></p>
+
+<script>
+
+
+function myFunction3() {
+  let x, text;
+
+  
+  x = document.getElementById("numb").value;
+
+  // It is if operator and this is for natural numbers!!!
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid, this isn't correct.It isn't natural number!";
+  } else {
+    text = "Input OK, this is correct.It's natural number!";
+  }
+  document.getElementById("id3").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
