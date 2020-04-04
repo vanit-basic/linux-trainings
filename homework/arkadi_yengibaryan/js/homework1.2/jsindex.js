@@ -1,24 +1,29 @@
-let questions = {
-	'question1': 'Is JavaScript the same as Java?(yes/no)',
-	'question2': 'How many parameters can be passed to a function?(one/many)',
-	'question3': 'What type of variable?\r let a = \'aa\''
-};
+let questions = [
+	'Is JavaScript the same as Java?(yes/no)',
+	'How many parameters can be passed to a function?(one/many)',
+	'What type of variable?\r let a = \'aa\''
+];
+
 
 showQuestions(questions);
 
 function showQuestions(questions) {
-	let n = 0;
-	for(let k in questions) {
-		n += checkAnswers(prompt(questions[k]));
+	let correctAnswersSum = 0;
+	for(let i = 0; i < questions.length; i++) {
+		correctAnswersSum += checkAnswers(prompt(questions[i]));
 	}
-	alert(n);
+	alert(`you’ve answered a provincial ${correctAnswersSum} question`);
 }
 
 function checkAnswers(answer) {
-	let ok = 0;
-	answer = answer.toLowerCase();
-	if (answer == 'no' || answer == 'many' || answer == 'string') {
-		ok++;
+	let correctAnswers = ['no', 'many', 'string'];
+	answer = answer.toLowerCase().trim();
+	let correctAnswersSum = 0;
+
+	for (let i = 0; i < correctAnswers.length; i++) {
+		if (answer == correctAnswers[i]) {
+			correctAnswersSum++;
+		}
 	}
-	return ok;
+	return correctAnswersSum;
 }
