@@ -9,10 +9,9 @@
 			let question1 = prompt('How many color have rainbow');
                         let question2 = prompt('Celebrate the wonders of the world');
                         let question3 = prompt('Who was the first to fly into spase');
-                        let question4 = prompt('Where is the Bolywood');
-                        let count = 0;
-
-	                   function victorina () {
+			let question4 = prompt('Where is the Bolywood');
+			let count = 0;
+			function victorina () {
                                 if (question1 == 7){
                                         count =count + 2; 
                                 } 
