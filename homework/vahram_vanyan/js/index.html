@@ -20,31 +20,40 @@
     </div>
 
     <script>
+        let answer=[
+            {answer: "Ամազոն", question: "Աշխարհի ամենաերկար գետը :"},
+            {answer: "Ռուսաստան", question: "Աշխարհի տարածքով ամենամեծ պետությունը :"},
+            {answer: "Բայկալ", question: "Աշխարհի ամենախոր լիճը :"},
+            {answer: "Էվերեստ", question: "Աշխարհի ամենաբարձր լեռը :"},
+            {answer: "Չինաստան", question: "Աշխարհի ամենամեծ բնակչությամբ երկիրը :"},
+            {answer: "1941", question: "Երբ է տեղի ունեցել երկրորդ հայրենական պատերազմը "},
+            {answer: "լուսին", question: "Երկիր մոլորակի արբանյակը :"},
+            {answer: "49", question: "Հաշվել արտահայտության արժեքը 25*25-24*24 :"},
+            {answer: "Օբամա", question: "ԱՄՆ նախկին նախագահի ազգանունը :"},
+            {answer: "Բրազիլիա", question: "Բրազիլիայի մայրաքաղաքը :"}
+        ];
         function start_viktorina() {
             let start=confirm('Խաղը սկսվեց: Խնդրում ենք պատասխանել գրական հայերենով:');
             if(start) {
-                let userName = prompt('Մուտքագրեք Ձեր անունը:');
-                if(!userName) userName= "մասնակից";
+                let userName = prompt('Մուտքագրեք Ձեր անունը:') || 'մասնակից';
                 let point=getRezult();
                 alert(`հարգելի ${userName} վաստակեցիք ${point} միավոր`);
             }
         }
         function getRezult() {
             let point=0;
-            let trueResult=['Ամազոն','Ռուսաստան','Բայկալ','Էվերեստ','Չինաստան','1941','լուսին','49', 'Օբամա', 'Բրազիլիա'];
             let userResult=[]
-            let promptArg=['Աշխարհի ամենաերկար գետը :','Աշխարհի տարածքով ամենամեծ պետությունը :','Աշխարհի ամենախոր լիճը :', 'Աշխարհի ամենաբարձր լեռը :','Աշխարհի ամենամեծ բնակչությամբ երկիրը :','Երբ է տեղի ունեցել երկրորդ հայրենական պատերազմը ','Երկիր մոլորակի արբանյակը :','Հաշվել արտահայտության արժեքը 25*25-24*24 :','ԱՄՆ նախկին նախագահի ազգանունը :','Բրազիլիայի մայրաքաղաքը :'];
-
-            for (let i = 0; i < promptArg.length; i++) {
-                userResult.push(prompt(promptArg[i]));                
+            for (let i = 0; i < answer.length; i++) {
+                userResult.push(prompt(answer[i]['question']) || 'no-answer');
             }
-            for (let i = 0; i < trueResult.length; i++) {
-                if (trueResult[i].toLowerCase()===userResult[i].toLowerCase()) {
-                    point+=1;
+            for (let i = 0; i < userResult.length; i++) {
+                if (answer[i]['answer'].toLowerCase()===userResult[i].toLowerCase().trim()) {
+                    point+=1;                                    
                 }
             }
             return point;
         }
+   
     </script>
 </body>
 
