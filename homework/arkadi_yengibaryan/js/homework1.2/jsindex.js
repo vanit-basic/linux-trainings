@@ -1,13 +1,11 @@
-let questions = [
-	'Is JavaScript the same as Java?(yes/no)',
-	'How many parameters can be passed to a function?(one/many)',
-	'What type of variable?\r let a = \'aa\''
-];
+showQuestions();
 
-
-showQuestions(questions);
-
-function showQuestions(questions) {
+function showQuestions() {
+	let questions = [
+		'Is JavaScript the same as Java?(yes/no)',
+		'How many parameters can be passed to a function?(one/many)',
+		'What type of variable?\r let a = \'aa\''
+	];
 	let correctAnswersSum = 0;
 	for(let i = 0; i < questions.length; i++) {
 		correctAnswersSum += checkAnswers(prompt(questions[i]));
