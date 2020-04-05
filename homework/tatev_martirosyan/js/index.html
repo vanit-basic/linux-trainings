@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-    <html>
+   <html>
         <head>
             <meta charset="UTF-8">
-                <script>
-                    let points = 0;
-                    let answer;
-                    function question(a) {
-                    answer = prompt(a);
-                    }
-                    question("Find the value of the expression 2**2**2");
-                    //console.log(typeof(answer));
-                    answer = Number.parseInt(answer);
-                    if (answer === 16) points += 1;
-                    question("Find the value of the expression (72%3)*7");
-                    answer = Number.parseInt(answer);
-                    if (answer === 14) points += 1;
-                    question("Find the value of the expression 32 + 'day' ");
-                    if (answer === '32day') points += 1;
-                    alert("Your points " + `${points}`);
-                    </script>
-                        <title> JS </title>
-			</head>
-                                    <body>
-                                        <h1> JavaScript </h1>
-                                                </body>
-                                                    </html>
+		<script>
+		let points = 0;
+let arr = [{
+        question: "Find the value of the expression 2**2**2",
+        answer: "16"
+    },
+    {
+        question: "Find the value of the expression (72%3)*7",
+        answer: "14"
+    },
+    {
+        question: "Find the value of the expression  32 + 'day' ",
+        answer: "32day"
+    }
+];
+Question(arr);
+function Question(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        let Answer = prompt(arr[i].question);
+        let valid = Valid(Answer);
+        if (valid && valid === arr[i].answer) points += 1;
+    }
+}
+function Valid(str) {
+    if (str) {
+        str = str.toLowerCase().trim();
+        return str;
+    } else return false;
+}
+alert(`Your points ${points}`);
+		</script>
+                <title> JS </title>
+	</head>
+		<body>
+              		<h1> JavaScript </h1>
+       		 </body>
+   </html>
