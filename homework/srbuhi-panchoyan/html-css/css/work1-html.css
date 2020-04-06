@@ -1,0 +1,28 @@
+
+.login {
+        background-color: green;
+        width: 400px;
+        height: 40px
+
+}
+.admin1 {
+        border-style: groove;
+        margin-left: 400px;
+        margin-right: 40px;
+        margin-top: 100px;
+}
+div.admin1 img {
+        margin: 55px;
+        width: 70%;
+        height: auto;
+}
+.admin2 {
+
+        padding: 15px;
+}
+input {
+        height: 25px;
+        width: 400px;
+
+}
+
