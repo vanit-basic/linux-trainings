@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Quiz</title>
+		<h1> Quiz</h1>
+                <meta charset = "UTF-8">
+
+	</head>
+
+	<body>
+
+		<script>  
+		
+			const datas = [
+			           { question: "How many states in USA?",
+				     answer: "50"   
+				   },
+			           { question: "Which is capital of Italy?",
+                                     answer: "Rome" 
+				   },    
+			           { question: "Which is the largest country in the world?",
+                                     answer: "Russia" 
+                                   },  
+			            ];
+                        let point = 0;
+                        giveTheQuestion(datas);
+
+                        function giveTheQuestion(datas){
+				 for(let i = 0; i < datas.length; i++ ){
+			         const userAnswer = prompt(datas[i].question);
+				 const correctAnswer = answerValidation(userAnswer);
+					 if (correctAnswer  && correctAnswer === datas[i].answer) point++; 
+				 }
+		                                                    }
+                        function answerValidation(answer){ 
+				if (answer){
+					return answer.trim();
+				} return false;
+		                                         }
+                              
+                        console.log(`Your point is: ${point}`);
+		
+		</script>
+	</body>
+
+
+</html>
