@@ -8,9 +8,9 @@
 		<h1> my firs project</h1>
 		<script>
 			const question1 = 'How many color have rainbow';
-			const ans1 = 7;
+			const ans1 = '7';
 			const question2 = 'Celebrate the wonders of the world';
-			const ans2 = 7;
+			const ans2 = '7';
 			const question3 = 'Who was the first to fly into spase';
 			const ans3= 'Yuri Gagarin';
 			const question4 = 'Where is the Bolywood';
@@ -23,13 +23,17 @@
 			victorina(question4, ans4);
 
 			function victorina(question, ans) {
-				const userAnswer =prompt (question);
-				if (userAnswer ){
-					const validAnswer = userAnswer.toLowerCase().trim();
-					if (validAnswer === ans) count +=2;
+				const userAnswer = prompt (question);
+				const validAnswer = answerValidation(userAnswer);
+				if (validAnswer && validAnswer === ans) count++;
+			}
+
+			function answerValidation(a) {
+				if (a) {
+					return a.toLowerCase().trim();
 				}
 			}
-			console.log(`Your points: ${count}`)
+			console.log(`Your points: `, count);
 						
                 </script>
 
