@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+    <tytle>Lesson1</tytle>
+</html>
+<body>
+      <script>
+          
+          
+        let questions = [
+              {  
+                     question:`What is the capitol of the USA?`, 
+                     answer:'Washington'
+              },
+
+              {
+                     question:`What is the capitol of the Germany?`, 
+                      answer:'Berlin'
+              },
+               
+              
+              {
+                     question:`What is the capitol of the Japan?`, 
+                     answer:'Tokio'
+              },
+        ];
+        let sumquestions = 0 ;
+        askQuestion(questions);
+
+        function askQuestion(questions) {
+        
+             for ( let i=0; i < questions.length; i++ ){
+                    let userAnswer = prompt(questions[i].question);
+                    let validAnswer = answerValidation(userAnswer);
+                    if ( validAnswer && validAnswer === questions[i].answer) sumquestions++;
+             }
+
+        }
+        function answerValidation(a){
+        if(a){
+                 a = a.toLowerCase().trim();
+                 return a;
+       }
+          return false;
+        }
+       
+              
+       alert(`Your score is: ${sumquestions}` );
+           
+                
+     </script>
+          
+     
+</body>
+
+</html>
