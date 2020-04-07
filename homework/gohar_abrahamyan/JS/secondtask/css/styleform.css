@@ -1,0 +1,56 @@
+
+#content {
+	border: 2px solid #f1f1f1;
+	width: 40%;
+	margin: 40px auto;
+	padding: 20px;
+	
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px auto;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}	
+ label {
+	font-weight: bolder;
+	font-size: 18px;
+}
+input[type=submit] {
+  background-color: #3081d2;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+.formElem {
+	margin: 10px 0;
+	margin-bottom: 30px;
+}
+.formElem > p { 
+	background: #92bfec;
+	padding: 10px;
+	max-width: 500px;
+}
+#answers {
+	width: 8.5%;
+}
+.formElem > label {
+	margin-right: 20px;
+	padding: 5px;
+	font-size: 12px;
+	background: #cde1f4;
+	border-radius: 10px;
+}
+#modalWindow {
+	background: #ededed;
+	position: absolute;
+	border: 1px solid;
+	padding: 30px;
+	z-index: 10;
+	left: 30%;
+	top: 30%;
+	border-radius: 20px;
+	display: none;
+}
