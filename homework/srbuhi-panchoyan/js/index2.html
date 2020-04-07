@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>
+		My project 2
+		</title>
+	</head>
+	<body>
+		<h1>Second project</h1>
+		<script>
+			const arr =[
+				{ 	question: '10**2',
+					answer: '100'
+				},
+				{
+					question: '8**1/3',
+					answer: '2'
+				},
+				{
+					question: '1+11',
+					answer: '12'
+				}
+				];
+			let point = 0;
+			victorina(arr) ;
+
+			function victorina (quize) {
+				for (let i=0; i< quize.length; i++){
+					const userAnswer = prompt (quize[i].question);
+					const validAnswer = answerValidation(userAnswer);
+					if (validAnswer && validAnswer === quize[i].answer) point +=2;
+				}
+				return point;
+			}
+
+			function answerValidation(a){
+				if (a) {
+					return a.toLowerCase().trim();
+				}
+				return false;
+			}
+			console.log (`Your point is: `,point);		
+		</script>
+	</body>
+</html>
