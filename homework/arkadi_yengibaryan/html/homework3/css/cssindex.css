@@ -1,0 +1,341 @@
+* {
+    box-sizing: content-box;
+}
+body {
+    background: #eae8e7;
+    font-family: 'Roboto', sans-serif;
+}
+/*
+    *start nav
+*/
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100vh;
+    transition: 2s;
+    transform: translateX(-100%);
+}
+.menu nav {
+    height: 100vh;
+    background: #fff;
+    width: 175px;
+}
+.menu nav ul {
+    margin-top: 10px;
+}
+.menu nav ul li {
+    margin-bottom: 20px;
+}
+.menu nav ul li a{
+    font-weight: 300;
+    font-size: 15px;
+    color: #000;
+}
+.menu nav ul li a:hover{
+    color: #5da4d9;
+}
+.deactivate_menu {
+    width: 85%;
+    height: 100vh;
+    opacity: 0;
+}
+.menu_active {
+    transform: translateX(0%);
+    transition: 0.8s;
+    
+}
+.menu_active_bg {
+    opacity: 0.5;
+    transition: 0.8s;
+}
+/*
+    *End nav
+*/
+
+/*
+    *start left bar
+*/
+.left_bar {
+    background: #5da4d9;
+}
+.menu_icon {
+    background: #5da4d9;
+    width: 30px;
+    position: absolute;
+    left: 6%;
+    top: 5%;
+}
+.menu_icon img {
+    width: 30px;
+}
+.profile_icon {
+    width: 100%;
+}
+.head {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.head_text {
+    position: absolute;
+    left: 25%;
+    top: 67%;
+}
+.head_text h2, span {
+    color: #fff;
+}
+.head_text h2 {
+    font-weight: 500;
+    font-size: 29px;
+}
+.head_text span {
+    font-size: 13px;
+}
+.left_bar_content {
+    margin-top: 15px;
+}
+.content_text {
+    margin-top: 20px;
+}
+.content_text p {
+    line-height: 17pt;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+	font-size: 10pt;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.content_text  img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 15px;
+}
+.text a {
+    font-weight: 500;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+.home p {
+    font-weight: 500;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+}
+.text span {
+    font-weight: 100;
+    font-size: 14px;
+
+}
+.skills h4 {
+    font-style: 18px;
+    color: #fff;
+}
+.skills span {
+    font-weight: 400;
+    font-size: 15px;
+}
+.phone, .email, .home, .skills {
+    margin-bottom: 20px;
+}
+.progress_bar {
+    margin: 0;
+    margin-top: 10px;
+    height: 2px;
+}
+.successful {
+    position: relative;
+	background: #fff;
+}
+.mark_successful {
+	position: absolute;
+	right: 0;
+	transform: translateY(-100%);
+	top: 6px;
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	border-radius: 10px;
+}
+.adobe_photoshop {
+    width: 70%;
+}
+.html {
+    width: 95%;
+}
+.css {
+    width: 90%;
+}
+.js {
+    width: 85%;
+}
+.php {
+    width: 70%;
+}
+.java {
+    width: 55%;
+}
+.sql {
+    width: 40%;
+}
+
+/*
+    *end left bar
+*/
+
+/*
+    *start right bar
+*/
+.right_bar {
+    color: #767270;
+}
+.right_bar h2 {
+    font-size: 29px;
+    margin-bottom: 20px;
+}
+.right_bar h3 {
+    font-size: 12pt;
+}
+.right_bar span {
+    font-weight: 400;
+    font-size: 10pt;
+    color: #767270;
+}
+.right_bar p {
+    font-weight: 300;
+    font-size: 10pt;
+}
+.work_experience, .education, .interestes {
+    background: #fff;
+}
+.work_experience img {
+    width: 100px;
+    height: 100px;
+}
+.right_bar_text {
+    border-bottom: 1px solid #bdbdbd;
+}
+.education img {
+    width: 100px;
+    height: 100px;
+}
+.interestes_icon {
+    width: 100px;
+    height: 100px;
+}
+.ionterestes_icons img {
+    width: 35px;
+    height: 35px;
+}
+.interestes a {
+    text-decoration: none;
+}
+/*
+    *end right bar
+*/
+
+/* 
+    *start stettings
+*/
+.settings {
+    background: #fff;
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    top: 40%;
+    height: 60px;
+    transform: translateX(285px);
+    transition: 0.8s;
+}
+.settings img {
+    width: 40px;
+    height: 40px;
+}
+.settings_bg {
+    background: #767270;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+}
+.settings_bg:hover {
+    cursor: pointer;
+    background: #5da4d9;
+}
+.settings_list {
+    background: #fff;
+    width: 300px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+.settings_active {
+    transform: translateX(0px);
+    transition: 0.8s;
+}
+.colors {
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-top: 10px;
+}
+.setting_head {
+    font-size: 16px;
+    font-weight: 700;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.setting_footer_text {
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.color_list {
+    margin-left: 0px;
+}
+.color_list div {
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    margin-left: 3px;
+}
+.red_bg {
+    background: #e74c3c;
+}
+.purple_bg {
+    background: #673ab7;
+}
+.oringe_bg {
+    background: #e67e22;
+}
+.green_bg {
+    background: #1abc9c;
+}
+.blue_bg {
+    background: #5da4d9 ;
+}
+.color_list div:hover {
+    cursor: pointer;
+}
+/* 
+    *end stettings
+*/
+
+/* 
+    background/text/border color change
+*/
+
+.change_bg {
+    background: #5da4d9;
+}
+.change_border_color {
+    border-bottom: 1px solid #4783c2;
+}
+.change_text_color {
+    color: #5da4d9;
+}
+.change_skills_bg {
+    background: #4783c2;
+}
