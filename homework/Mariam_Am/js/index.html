@@ -18,15 +18,15 @@
 
 			let sum = 0;
 
-			AskQuestion(answerthequestions);
-	function AskQuestion(answerthequestions) 
+			askQuestion(answerthequestions);
+	function askQuestion(answerthequestions) 
 		{
 		for (let i = 0; i < answerthequestions.length; i++) 
 			{
 				let UserAnswer = prompt(answerthequestions[i].question);
 				let ValidAnswer = answervalidation(UserAnswer);
 				
-				if (ValidAnswer && ValidAnswer === answerthequestions[i].answer) {sum++};
+				if (ValidAnswer && ValidAnswer === answerthequestions[i].answer) sum++;
 			}
 		}
 	function answervalidation(a) 
