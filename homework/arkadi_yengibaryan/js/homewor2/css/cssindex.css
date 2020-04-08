@@ -1,0 +1,42 @@
+.question {
+    background: #f3f0f0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+form p {
+    text-align: center;
+}
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h1 {
+    color: grey;
+}
+.content {
+    position: relative;
+}
+.infoModal {
+    background: #3eabf3;
+    height: 100px;
+    top: 50%;
+    opacity: 0.7;
+    position: absolute;
+    transform: translateY(-400%);
+    transition: 1s;
+    z-index: 99;
+}
+.infoModal p {
+    font-style: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+.btn {
+    position: absolute;
+    right: 0;
+    transform: translateX(-15%);
+}
+.showModal {
+    transform: translateY(0);
+    transition: 1s;
+}
