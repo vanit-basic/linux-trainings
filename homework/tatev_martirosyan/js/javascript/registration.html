@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Registration</title>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet"  href="./css/style.css" />
+	</head>
+	<body>
+	<h2>Please register to start the game</h2>
+		<form id="form2">
+			<label for="input1"><b>Name</b></label><br>
+			<input type="text" id="nameInput" name="name" placeholder="Enter your name"><br><br>
+
+			<label for="input2"><b>Email</b></label><br>
+			<input type="email" id="emailInput" name="email" placeholder="Enter your email" ><br><br>
+
+			<label for="input3"><b>Password</b></label><br>
+			<input type="password" id="passwordInput" name="password" placeholder="Enter your password"><br><br>
+
+			<input type="submit" class="btn1" onclick="clickEvent()" value="Submit">
+		</form>
+		<div id="modalWindow">
+			<p></p>
+		</div>
+		<script src='./js/index_1.js'></script>
+
+	</body>
+</html>
