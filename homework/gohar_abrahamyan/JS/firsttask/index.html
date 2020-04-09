@@ -1,39 +1,43 @@
 <!DOCTYPE html
 <html>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Quiz game</title>
+	</head>
+	<body>
 
-<p>Let's play the simple quiz game</p>
+	<p>Let's play the simple quiz game</p>
 
-<script>
-	const question1 = "Which is the most populous continent?";
-	const question2 = "Which sport is played at Wimbledon?";
-	const question3 = "What is the capital of The United Kingdom?";
+	<script>
+		const question1 = "Which is the most populous continent?";
+		const question2 = "Which sport is played at Wimbledon?";
+		const question3 = "What is the capital of The United Kingdom?";
 
-	const answer1 = "asia";
-	const answer2 = "tennis";
-	const answer3 = "london";
-	let pointsum = 0;
+		const answer1 = "asia";
+		const answer2 = "tennis";
+		const answer3 = "london";
+		let pointsum = 0;
 
-	function letsplay(question, answer) {
+		function letsplay(question, answer) {
 
-  		const result = prompt(question);
-		if (result) {
-			const correctResult = result.toLowerCase().trim();
-			if(correctResult == answer){
-                        	alert(`Correct, you get 1 point`)
-				pointsum++;
-	                }
+  			const result = prompt(question);
+			if (result) {
+				const correctResult = result.toLowerCase().trim();
+				if(correctResult == answer){
+                        		alert(`Correct, you get 1 point`)
+					pointsum++;
+				}
 
-		 }
+		 	}
 
-	}
-	letsplay(question1, answer1);
-	letsplay(question2, answer2);
-	letsplay(question3, answer3);
+		}
+		letsplay(question1, answer1);
+		letsplay(question2, answer2);
+		letsplay(question3, answer3);
 	
-	 alert(`Greate Job, You Get ${pointsum} Point`)
-</script>
+	 	alert(`Greate Job, You Get ${pointsum} Point`)
+	</script>
 
-</body>
+	</body>
 </html>
 
