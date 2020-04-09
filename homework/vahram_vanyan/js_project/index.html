@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>my first page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center p-3">
+            <form>
+                <label for="usname"> <b>Username</b></label><br>
+                <input type="text" id="usname" name="usname" placeholder="Enter Username"><br>
+                <label for="email"><b>Email</b></label><br>
+                <input type="email" id="email" name="email" placeholder="Enter Email"><br>
+                <label for="password"><b>Password</b></label><br>
+                <input type="password" id="password" name="password" placeholder="Enter Password"><br>
+                <input type="submit" id='button' onclick="usersLocation()">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let usname=document.getElementById('usname');
+        let email=document.getElementById('email');
+        let password=document.getElementById('password');
+
+        function usersLocation(){
+            if (usname.value!='' && email.value!='' && password.value!='') {
+                if(usValid()){
+                    localStorage.setItem(usname.value,password.value);
+                    location.replace('viktorina.html');
+                } else{
+                    alert('փոխեք ձեր տվյալները');
+                };
+            } else alert('Լրացրեք բոլոր դաշտերը');
+        }
+        function usValid(){
+            let valid;
+            for (const key in localStorage) {
+                if (usname.value!=key && password.value!=localStorage.getItem(key)) {
+                    valid=true;
+                } else  return false;
+            } return true;
+        }
+    </script>
+</body>
+
+</html>

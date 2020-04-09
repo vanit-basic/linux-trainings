@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/viktorina.css">
+    <title>my first page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center p-2">
+            <div class="col-sm-10">
+                <form action="">
+                    <div id="viktorina" class=" m-2 p-2 col-sm-12 ustify-content-center"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let answer=[
+            {allanswer:['Ամազոն','Նեղոս','Արաքս','Կուր'],  trueanswer: "Ամազոն", question: "Աշխարհի ամենաերկար գետը :"},
+            {allanswer:['ԱՄՆ','Կանադա','Հնդկաստան','Ռուսաստան'],  trueanswer: "Ռուսաստան", question: "Աշխարհի տարածքով ամենամեծ պետությունը :"},
+            {allanswer:['Լադոգա','Բայկալ','Կասպյան','Նյասա'],  trueanswer: "Բայկալ", question: "Աշխարհի ամենախոր լիճը :"},
+            {allanswer:['Արարատ','Մակալու','Կանչենջանգա','Էվերեստ'],  trueanswer: "Էվերեստ", question: "Աշխարհի ամենաբարձր լեռը :"},
+            {allanswer:['Հնդկաստան','ԱՄՆ','Իսպանիա','Չինաստան'],  trueanswer: "Չինաստան", question: "Աշխարհի ամենամեծ բնակչությամբ երկիրը :"},
+            {allanswer:['1940','1939','1941','1945'],  trueanswer: "1941", question: "Երբ է տեղի ունեցել երկրորդ հայրենական պատերազմը "},
+            {allanswer:['Լուսին','Մարս','Նեպտուն','Պլուտոն'],  trueanswer: "լուսին", question: "Երկիր մոլորակի արբանյակը :"},
+            {allanswer:['45','4','44','49'],  trueanswer: "49", question: "Հաշվել արտահայտության արժեքը 25*25-24*24 :"},
+            {allanswer:['Բուշ','Ջորջ','Մեդիսոն','Օբամա'],  trueanswer: "Օբամա", question: "ԱՄՆ նախկին նախագահի ազգանունը :"},
+            {allanswer:['Ռիօ դե Ժանեիրո','Բրազիլիա','Սալվադոր','Պալմաս'],  trueanswer: "Բրազիլիա", question: "Բրազիլիայի մայրաքաղաքը :"}
+        ];
+        // function start_viktorina() {
+        //     let start=confirm('Խաղը սկսվեց: Խնդրում ենք պատասխանել գրական հայերենով:');
+        //     if(start) {
+        //         let userName = prompt('Մուտքագրեք Ձեր անունը:') || 'մասնակից';
+        //         let point=getRezult();
+        //         alert(`հարգելի ${userName} վաստակեցիք ${point} միավոր`);
+        //     }
+        // }
+        // function getRezult() {
+        //     let point=0;
+        //     let userResult=[]
+        //     for (let i = 0; i < answer.length; i++) {
+        //         userResult.push(prompt(answer[i]['question']) || 'no-answer');
+        //     }
+        //     for (let i = 0; i < userResult.length; i++) {
+        //         if (answer[i]['answer'].toLowerCase()===userResult[i].toLowerCase().trim()) {
+        //             point+=1;                                    
+        //         }
+        //     }
+        //     return point;
+        // }
+        document.body.onload = () => createElement();
+        function start_viktorina(){
+            // event.preventDefault();
+            createElement();
+            
+        }
+        function createElement(){
+            for (let i = 0; i < answer.length; i++) {
+                let div=document.createElement('div');
+                let question=document.createElement('p');
+                question.innerHTML=answer[i]['question'];
+                div.appendChild(question);
+                for (let j = 0; j < answer[i]['allanswer'].length; j++) {
+                    let label=document.createElement('label');
+                    label.innerText=answer[i]['allanswer'][j];
+                    let radi_input=document.createElement('input');
+                    radi_input.type='radio';
+                    radi_input.name=answer[i]['trueanswer'];
+                    radi_input.value=answer[i]['allanswer'][j];
+                    label.appendChild(radi_input);
+                    div.appendChild(label);
+                }
+           document.getElementById('viktorina').appendChild(div); 
+            }
+            let Button = document.createElement('input');
+            Button.type = 'submit';
+            Button.value = 'rezult';
+            Button.setAttribute('class','m-2 btn btn-primary');
+            Button.addEventListener ( 'click', getRezult);
+            document.getElementById('viktorina').appendChild(Button);
+        }
+        function getRezult(){
+            let point=0;
+            let ins=Array.from(document.getElementsByTagName('input'));
+            for (let i = 0; i < ins.length; i++) {
+                if(ins[i].checked && ins[i].value==ins[i].name){
+                    point+=1;
+                }   
+            }
+            alert( `վաստակած միավորների քանակը : ${point}`);
+            }
+            if (sessionStorage.getItem("user")) console.log(sessionStorage.getItem("user"));
+            if (localStorage.getItem("admin")) console.log(localStorage.getItem("admin"));
+    </script>
+</body>
+
+</html>
