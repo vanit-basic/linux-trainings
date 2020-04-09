@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Lesson 1</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<form onsubmit='submitHandler(event)'>
+			<label for="input1">Name</label><br>
+			<input type="text" id="nameInput" name="name" placeholder="Enter your name"><br>
+
+			<label for="input2">Email</label><br>
+			<input type="email" id="emailInput" name="email" placeholder="Enter your email" ><br>
+
+			<label onclick="clickEvent(event)" for="input2">Password</label><br>
+			<input type="password" id="passwordInput" name="password" placeholder="Enter your password"><br><br>
+
+			<input type="submit" value="Submit">
+		</form>
+		<script>
+//			const users = [];
+			
+			function clickEvent(event) {
+				event.preventDefault();
+				console.log('this is a click event', event);
+			}
+
+			function validation() {
+				const name = document.getElementById('nameInput').value;
+				const email = document.getElementById('emailInput').value;
+				const password = document.getElementById('passwordInput').value;
+
+				if (name && email && password) {
+					addUser(name, email, password);
+				} else {
+					alert('Please enter all fields');
+					return;
+				}
+				
+			}
+		
+			function addUser(n, e, p) {
+				const user = {
+					name: n,
+					email: e,
+					password: p
+				};
+//				users.push(user);
+//				sayHello(n);
+
+                        if (localStorage.getItem(n)) {
+                                alert(`Please enter a another user name.`);
+                                return;
+                        }
+
+                        localStorage.setItem("name", JSON.stringify(user));
+
+                        sayHello(n);
+
+			}
+
+			function sayHello(n) {
+				alert(`user ${n} is added`);
+				location.replace('index.html');
+			}
+			
+			function submitHandler(event) {
+				event.preventDefault();
+				//console.log(event.target.value);
+				validation();
+			}
+		</script>
+	</body>
+</html>
