@@ -1,0 +1,75 @@
+@media only screen and (max-width: 600px) {
+			.formElem > label {
+				display: block;
+			}
+			.btn{
+				 
+				 width: 30%;
+			}
+			.btn1{
+				 width:30%;
+				 
+			}
+		}
+			body {
+				user-select: none;
+			}
+			h1 {
+				margin-left:18%;	
+			}
+			
+			#form2 {
+				padding:3%;
+			}
+			.formElem {
+				margin: 10px 0;
+				margin-bottom: 30px;
+				margin-left:3%;
+			}
+			.formElem > p {
+				text-align: center; 
+				background: #D8BFD8;
+				border-radius: 20px;
+				padding: 10px;
+				max-width: 500px;
+			}
+			.formElem > label {
+				margin-right: 7%;
+				padding: 5px;
+				background: #E6E6FA;
+				border-radius: 10px;
+			}
+			#modalWindow {
+				background: #FFE4E1;
+				position: absolute;
+				border: 1px solid;
+				padding: 30px;
+				z-index: 10;
+				left: 16%;
+				top: 25%;
+				border-radius: 20px;
+				display: none;
+			}
+			.btn {
+				height: 50px;
+				margin-left:3%;
+				background-color:#BC8F8F;
+				font-weight:bold;
+				border-radius:10px;
+			}
+			.btn1 {
+				height: 30px;
+				background-color:silver;
+				font-weight:bold;
+				border-radius:5px;
+				color:white;
+			}
+			#nameInput {
+				height:30px;
+			}
+			#emailInput {
+				height:30px;
+			}
+			#passwordInput {
+				height:30px;
+			}
