@@ -49,15 +49,22 @@
 					email: e,
 					password: p
 				};
-				
-				
 				users.push(user);
+				
+				
+				if(!localStorage.getItem(n))  
+				{
+					localStorage.setItem(n, JSON.stringify(user));
+				} else {
+					alert("Write another user");
+					return;
+				}
 				sayHello(n);
 			}
 
 			function sayHello(n) {
 				alert(`user ${n} is added`);
-				location.replace('index6.html');
+				location.replace('index1.html');
 			}
 			
 			function submitHandler(event) {
