@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Victorina</title>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				user-select: none;
+			}
+			.formElem {
+				margin: 10px 0;
+				margin-bottom: 30px;
+			}
+			.formElem > p {
+				text-align: center; 
+				background: silver;
+				padding: 10px;
+				max-width: 500px;
+			}
+			.formElem > label {
+				margin-right: 20px;
+				padding: 5px;
+				background: #ededed;
+				border-radius: 10px;
+			}
+			#modalWindow {
+				background: #ededed;
+				position: absolute;
+				border: 1px solid;
+				padding: 30px;
+				z-index: 10;
+				left: 30%;
+				top: 30%;
+				border-radius: 20px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Victorina game</h1>
+		<form id="form" onsubmit="submitHandler(event)">
+		</form>
+		
+		<div id="modalWindow">
+			<p></p>
+		</div>
+
+		<script src='questions.js'></script>
+		<script src='index1.js'></script>
+	</body>
+</html>
+
+
