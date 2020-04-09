@@ -39,7 +39,7 @@ input[type=submit] {
 .formElem > label {
 	margin-right: 20px;
 	padding: 5px;
-	font-size: 12px;
+	font-size: 90%;
 	background: #cde1f4;
 	border-radius: 10px;
 }
