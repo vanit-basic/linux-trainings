@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Login</title>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/css_index_old.css">        
+	</head>
+	<body>
+		<form onsubmit='submitHandler(event)'>
+			<label for="nameInput">Name</label><br>
+			<input type="text" id="nameInput" name="name" placeholder="Enter your name"><br>
+
+			<label for="emailInput">Email</label><br>
+			<input type="email" id="emailInput" name="email" placeholder="Enter your email" ><br>
+
+			<label for="passwordInput">Password</label><br>
+			<input type="password" id="passwordInput" name="password" placeholder="Enter your password"><br><br>
+
+			<input type="submit" value="Submit" class="submit">
+		</form>
+        
+        <div id="modalWindow">
+			<p></p>
+		</div>
+        
+		<script src="js/index_old.js"></script>
+	</body>
+</html>
