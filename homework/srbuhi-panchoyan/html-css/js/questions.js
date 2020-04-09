@@ -16,6 +16,6 @@ const arr =[
 		question: '1+11',
 		answers: ['10', '111', '11', '12'],
 		trueAnswer: '12'
-	}
+	},
 ];
 
