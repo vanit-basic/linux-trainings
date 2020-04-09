@@ -17,19 +17,20 @@ let arr = [{
         answer: "32day"
     }
 ];
-Question(arr);
-function Question(arr) {
+askQuestion(arr);
+function askQuestion(arr) {
     for (let i = 0; i < arr.length; i++) {
         let Answer = prompt(arr[i].question);
-        let valid = Valid(Answer);
+        let valid = validation(Answer);
         if (valid && valid === arr[i].answer) points += 1;
     }
 }
-function Valid(str) {
+function validation(str) {
     if (str) {
         str = str.toLowerCase().trim();
         return str;
-    } else return false;
+    }
+	return false;
 }
 alert(`Your points ${points}`);
 		</script>
