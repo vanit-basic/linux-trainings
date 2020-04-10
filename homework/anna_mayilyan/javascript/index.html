@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test</title>
+</head>
+<body>
+        <script>
+var questions = [
+    {
+          prompt: "Which is the capital of South Korea?\n(a) Seoul\n(b) Busan\n(c) Incheon",
+          answer: "a"
+    },
+    {
+         prompt: "Which is the smallest continent?\n(a) Africa\n(b) Australia\n(c) Asia",
+         answer: "b"
+    },
+
+
+{        prompt: "Which is the highest mountain?\n(a) Everest\n(b) K2\n(c) Ararat",
+         answer: "a"
+},
+
+{        prompt: "What is the most spoken language in the world?\n(a) Italian\n(b) French\n(c) Chinese",
+         answer: "c" 
+},
+    {
+         prompt: "In what year google was launched on the web?\n(a) 1998\n(b) 1997\n(c) 1995",
+         answer: "a"
+    }
+];
+var score = 0;
+
+
+for(var i = 0; i < questions.length; i++){
+    var response = window.prompt(questions[i].prompt);
+    if(response == questions[i].answer){
+         score++;
+         alert("Correct!");
+    } else {
+         alert("WRONG!");
+    }
+}
+alert("you got " + score + "/" + questions.length);
+</script>
+</body>
+</html>
