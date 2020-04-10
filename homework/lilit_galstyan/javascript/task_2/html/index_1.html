@@ -1,0 +1,81 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Lesson 1</title>
+		<meta charset='utf-8'>
+		<style>
+                #modalWindow {
+                                background: white;
+                                color: #5da4d9;
+                                position: absolute;
+                                border: 1px solid;
+                                padding: 30px;
+                                z-index: 10;
+                                left: 30%;
+                                top: 30%;
+                                border-radius: 20px;
+                                display: none;
+				margin-top: 5%;	
+                        }
+               </style>
+	</head>
+	<body>
+		<form onsubmit='submitHandler(event)' id="">
+			<label for="input1">Name</label><br>
+			<input type="text" id="nameInput" name="name" placeholder="Enter your name" required><br>
+
+			<label for="input2">Email</label><br>
+			<input type="email" id="emailInput" name="email" placeholder="Enter your email" required ><br>
+
+			<label onclick="clickEvent(event)" for="input2">Password</label><br>
+			<input type="password" id="passwordInput" name="password" placeholder="Enter your password" required><br><br>
+
+			<input  type="submit" value="Submit">
+                        <div id="modalWindow">
+                        <p></p>
+                        </div>
+		</form>
+
+		<script src='../JS/questions.js'></script>
+		<script src="../JS/index.js"></script>	
+		<script>
+			function clickEvent(event) {
+				event.preventDefault();
+				console.log('this is a click event', event);
+			}
+
+			function validation() {
+				const name = document.getElementById('nameInput').value;
+				const email = document.getElementById('emailInput').value;
+				const password = document.getElementById('passwordInput').value;
+
+				if (name && email && password) {
+					addUser(name, email, password);
+				} 	
+			}
+                        		
+			function addUser(n, e, p) {
+				const user = {
+					name: n,
+					email: e,
+					password: p
+				};
+				    if (!localStorage.getItem(n)){
+			             replace();    
+				    } else {
+                                      showMessageWindow("name", "hello");
+					    return; 
+				    }
+				localStorage.setItem(n, JSON.stringify(user));
+			}
+	            	function replace() {
+				location.replace('./index_2.html');
+			}
+			
+			function submitHandler(event) {
+				event.preventDefault();
+				validation();
+			}
+		</script>
+	</body>
+</html>
