@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>my first page</title>
+</head>
+
+<body>
+    <div class="flx-contenier">
+        <div class="main">
+            <h2 class="sansserif_red">Add Gmail to your Google Account</h2>
+            <p class="gmail_post">
+                By completing this form, you're upgrading to Gmail, email from Google. Gmail works on any
+                device, blocks spam, and much more.<br><br>
+                You'll be able to sign in using your new Gmail address, which will become the primary email
+                address associated with this account. We'll send account updates, invitations, and other
+                notifications to your Gmail address.<br><br>
+                hhasmik_n@instigatemobile.com will become an <a href="">alternate email address</a>  on this account,
+                and you'l stil be able to sign in with. <br><br>
+                Ifyou prefer, you can create <a href="">a new Google Account</a> with email, and leave this one as-is.
+            </p>
+        </div>
+        <div class="registr">
+            <form>
+                <label for="fname"> <b>Name</b></label><br>
+                <input type="text" id="fname" name="fname" class="input1" placeholder="Enter Username">
+                <input type="text" name="" id="fname2" class="input1" placeholder="Enter Lastname"><br>
+                <label for="email"><b>Choose your Gmail address</b></label><br>
+                <input type="email" id="email" name="lname" placeholder="@gmail.com"><br>
+                <label for="phone">
+                    <b>Mobile phone</b>
+                    <input type="text" name="phone" id="phone1" class="phone" list="phone" value="" onchange="myFunction()">
+                    <datalist id="phone">
+                        <option value="+374">
+                        <option value="+266">
+                        <option value="+255">
+                    </datalist>
+                </label><br>
+                <label for="courent_email">
+                    <b>Your current email address</b>
+                    <input type="email">
+                </label>
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+
+        <script>
+            function myFunction() {
+              let x = document.getElementById("phone1");
+              if (x.value=="+374") {
+                  x.style.backgroundImage='url("images/1.png")';
+              }
+              else if (x.value=="+266") {
+                  x.style.backgroundImage='url("images/2.png")';
+              }
+              else if (x.value=="+255") {
+                  x.style.backgroundImage='url("images/3.png")';
+              }
+              else {
+                  x.style.backgroundImage='url("images/4.png")';
+              }
+            }
+        </script>
+
+</body>
+
+</html>
