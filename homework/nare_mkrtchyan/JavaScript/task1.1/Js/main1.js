@@ -40,6 +40,8 @@ function showMessageWindow(t, m) {
 		body.innerHTML = `Please answer a question: ${m}`;
 	} else if (t === "score"){
 		body.innerHTML = `Your score is: ${m}`;
+	} else if ( t === "allfields") {
+		body.innerHTML = `${m}`;
 	}
 
 	modal.style.display = 'block';

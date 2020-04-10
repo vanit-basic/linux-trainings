@@ -1,19 +1,10 @@
-.column {
-	float: left;
-	width: 33%;
-}
-
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-@media screen and (max-width: 450px){
-	.column{
-		width: 100%;
-		margin-left: 10%;
-	}
+.reg {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
 }
 
 h2 {
@@ -34,6 +25,8 @@ input {
 #btn {
 	color: white;
        background-color: #070e52;
+	padding: 0.5%;
+	font-size: 120%;
 }
 body {
 	user-select: none;
@@ -51,12 +44,6 @@ h1 {
 	color: white;
 	padding: 1.5%;
 	max-width: 800px;
-}
- #btn {
-	background-color: black;
-	font-size: 150%;
-	padding: 0.5%;
-	margin: 2%;
 }
 .formElem > label {
 	margin-right: 1.5%;
