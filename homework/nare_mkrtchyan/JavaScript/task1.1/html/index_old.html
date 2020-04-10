@@ -3,25 +3,15 @@
 	<head>
 		<title>Lesson 1</title>
 		<meta charset='utf-8'>
-		<style>
-			label {
-				margin: 2%;
-				font-size: 120%;
-				color: #070e52;
-			}
-			
-			input {
-				margin-left: 2%;
-				padding: 1%;
-			}
-			#btn {
-				color: white;
-				background-color: #070e52;
-			}
-		</style>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<link rel = "stylesheet" href = "../css/regvic.css" >
 	</head>
 	<body>
+		<div class="row">
+		<div class ="column"><p></p></div>
+		<div class="column">
 		<form onsubmit='submitHandler(event)'>
+			<h2>Registration</h2>
 			<label for="input1">Name</label><br>
 			<input type="text" id="nameInput" name="name" placeholder="Enter your name"><br>
 
@@ -32,14 +22,14 @@
 			<input type="password" id="passwordInput" name="password" placeholder="Enter your password"><br><br>
 			<input type="submit" id="btn" value="Submit" >
 		</form>
+		</div>
+		<div class ="column"><p></p></div>
+		</div>
 		<script>
 
 			function goToVictorinaPage() {
 				location.replace('./index.html');
 			}
-
-	//		let btn = document.getElementById('btn');
-	//		btn.onclick = goToVictorinaPage;
 
 			function validation() {
 				const name = document.getElementById('nameInput').value.trim();
@@ -60,7 +50,7 @@
 					email: e,
 					password: p
 				};
-			//	users.push(user);
+
 				if(!localStorage.getItem(n)){
 					localStorage.setItem(n, JSON.stringify(user));
 				} else {

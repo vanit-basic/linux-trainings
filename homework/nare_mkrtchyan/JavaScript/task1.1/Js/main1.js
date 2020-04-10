@@ -27,6 +27,7 @@ function createElements() {
 
 	const submitButton = document.createElement('input');
 	submitButton.type = 'submit';
+	submitButton.id = 'btn';
 	submitButton.value = 'Submit';
 	document.getElementById('form').appendChild(submitButton);
 }

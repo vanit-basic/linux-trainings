@@ -1,0 +1,79 @@
+.column {
+	float: left;
+	width: 33%;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 450px){
+	.column{
+		width: 100%;
+		margin-left: 10%;
+	}
+}
+
+h2 {
+	margin-top:5%;
+	color: #020230;
+}
+
+label {	
+	font-size: 120%;
+	color: #070e52;
+}
+
+input {
+	margin-bottom: 1%;
+	padding: 0.5%;
+}
+
+#btn {
+	color: white;
+       background-color: #070e52;
+}
+body {
+	user-select: none;
+}
+.formElem {
+	margin: 2%;
+	margin-bottom: 2%;
+}
+h1 {
+	margin-left: 2%;
+} 
+.formElem > p {
+	text-align: center;
+	background: #020230;
+	color: white;
+	padding: 1.5%;
+	max-width: 800px;
+}
+ #btn {
+	background-color: black;
+	font-size: 150%;
+	padding: 0.5%;
+	margin: 2%;
+}
+.formElem > label {
+	margin-right: 1.5%;
+	padding: 0.5%;
+	background: #ededed;
+	border-radius: 10px;
+}
+#modalWindow {
+	background: #ededed;
+	position: absolute;
+	border: 1px solid;
+	padding: 30px;
+	 z-index: 10;
+	left: 30%;
+	top: 30%;
+    	border-radius: 20px;
+	display: none;
+}
+
+
