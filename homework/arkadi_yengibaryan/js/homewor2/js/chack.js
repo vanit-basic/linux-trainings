@@ -44,14 +44,10 @@ function checkAnswers(questions) {
 
 	for (let i = 0; i < input.length; i++) {
 		checkAnswer = input[i].parentElement.innerHTML.split('>')[1];
-		if (input[i].checked && input[i].name == 'q0' && checkAnswer == questions[0].correctAnswers) {
-			correctAnswersSum++;
-		}
-		if (input[i].checked && input[i].name == 'q1' && checkAnswer == questions[1].correctAnswers) {
-			correctAnswersSum++;
-		}
-		if (input[i].checked && input[i].name == 'q2' && checkAnswer == questions[2].correctAnswers) {
-			correctAnswersSum++;
+		for(let j = 0; j < questions.length; j++) {
+			if (input[i].checked && input[i].name == `q${j}` && checkAnswer == questions[j].correctAnswers) {
+				correctAnswersSum++;
+			}
 		}
 	}
 
