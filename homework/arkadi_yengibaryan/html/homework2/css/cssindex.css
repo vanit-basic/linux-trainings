@@ -1,0 +1,40 @@
+body {
+    font-family: Arial;
+}
+.head {
+    margin-bottom: 25px;
+    margin-left: 95px;
+    color: red;
+}
+.left_bar p {
+    font-size: 18px;
+    text-align: justify;
+    
+}
+.right_bar {
+    max-width: 360px;
+    background-color: #f1f1f1;
+}
+.right_bar_form {
+    margin: 20px 10px;
+}
+.right_bar_form label {
+    font-weight: bold;
+    font-size: 14px;
+}
+.right_bar_form_name {
+    background: url(../img/name_atribut.png) no-repeat;
+    background-position: 130px;
+    background-color: #fff;
+    margin-right: 10px;
+
+}
+.right_bar_form_email::placeholder {
+    text-align: right;
+}
+.dropdown button {
+    background: #ffffff;
+}
+.d-flex img ,a {
+    margin-left: 12px;
+}
