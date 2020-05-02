@@ -1,4 +1,4 @@
-let str = "asd fng asd ert fng asd ert fng asd";
+let str = "asd fng fng fng asd ert fng asd ert fng asd";
 let arr = str.split(" ");
 let c = 0, max = 0;
 for(let i=0; i<arr.length; i++){
