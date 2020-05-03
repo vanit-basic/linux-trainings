@@ -1,0 +1,33 @@
+<!Doctype html>                                 <html>                                                  <head>
+                <title>JS homework</title>                      <meta charset='utf-8'>                  </head>                                         <body>                                          <script>
+                let str="red blue green silver red green green";
+		let a=str.split(" ");
+		console.log(a);
+		let maxCount=0;
+		let maxValue=[];
+		let newArr=[];
+		a.forEach(ff);
+		function ff (value, index, arr)
+		{
+			let c=newArr.filter(item=>value==item);
+			if(c.length==0)
+			{
+				newArr.push(value);
+				let qanak=0;
+				for(let i=index; i< arr.length; i++)
+				{
+					if(arr[i]===value)
+											qanak++;
+				}
+				if(maxCount<=qanak)
+				{
+					maxCount=qanak;
+					maxValue.push(value);
+				}
+			}
+		}
+
+		console.log(maxValue);
+	</script> 
+	</body>                              
+</html>
