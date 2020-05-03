@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Homework</title>
+	<meta charset = "UTF-8">
+</head>
+<body>
+	<script>
+
+         //task_1	
+         let numbers = [1,2,3,5,6,2,11,13];
+         const ar =  numbers.filter(num => num %3 === 0);        
+         const sum = ar.reduce((total, ar) => {
+         return total + ar 
+         }, 0);
+         console.log(sum);
+
+         //task_2
+         let a = 0;
+         for (let i = 0; i < numbers.length; i = i+2){
+	 a = numbers[i];
+	 numbers[i] = numbers[i+1];
+	 numbers[i+1] = a;	
+	 }
+         console.log(numbers);
+
+         //task_3
+         let arr = [5,3,1,2,3,5,6,1,2]
+         let maxInterval = 0;
+         arr.forEach((_,index) => {
+	 let temp = 1;
+		 while(arr[index+1] > arr[index]){
+	 temp++;
+	 index++;	 
+	         }
+         if (temp > maxInterval){
+	 maxInterval = temp;
+	 }
+	 });
+         console.log(maxInterval);
+
+         //task_4
+         let text = "I like apples and he likes apples too";
+         let words = text.split(" ");
+         let maxCount = words.filter(x => x == words[0]).length;
+         words.filter( a => {
+  	 b = words.filter(x => x == a).length;
+	 if (maxCount < b){
+	 maxCount = b;			 
+	 console.log(a)}
+	 });
+		</script>	
+</body>
+</html>
