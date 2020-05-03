@@ -77,20 +77,21 @@ console.log(countWord(string));
 function commonWord(string){
 	let str = string.split(" ");
 	let max=0;
-	console.log(str);
+	let arrSet = [... new Set(str)];
+	let word;
 	
-	for(let i = 0; i<str.length; i++){
+	for(let i = 0; i<arrSet.length; i++){
 		let count = 0;
 		for(let j= 0; j< str.length;j++){
-			if (str[i] === str[j]){
+			if (arrSet[i] === str[j]){
 				count++;
 				if ( max < count) {
 					max = count;
-					return str[i];
+					word = arrSet[i];
 				}
 			} 
 		}
 	}
-	
+	return word;
 }
 console.log(commonWord(string));
