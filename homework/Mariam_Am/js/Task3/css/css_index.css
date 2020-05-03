@@ -1,0 +1,42 @@
+body{
+    background-color:darkcyan;
+}
+#form{
+    width: 44%;
+    margin: 0px auto;
+    border:  30px darkgreen;
+    padding: 20px;
+color: white;}
+.formElem {
+    margin: 10px 0;
+    margin-bottom: 30px;;
+}
+.formElem > p {
+    text-align: center; 
+    padding: 10px;
+}
+.formElem > label {
+    margin-right: 25px;
+    padding: 7px;
+    border: snow;
+    border-radius: 25px;
+}
+.submit {
+    width: 30%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+#modalWindow {
+    background: #ededed;
+    position: absolute;
+    border: 1px solid;
+    z-index: 10;
+    left: 30%;
+    top: 30%;
+    border-radius: 25px;
+    display: none;
+}
