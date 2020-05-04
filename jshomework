@@ -1,0 +1,28 @@
+Task1
+let count = 0;
+let num = [6,7,9,10,12];
+num.forEach((i)=>{if(i%3==0){count+=i;}});
+console.log(count);
+
+Task2
+let num =0;
+let arr = [1,2,3,4,6,7,5,4];
+for(let i=0;i<arr.length;i+=2){
+num=arr[i];
+arr[i]=arr[i+1];
+arr[i+1]=num;
+}console.log(arr);
+
+Task3
+ let newarr = [];
+ let num =0;
+ let count=0;
+ let arr = [1,7,9,10,5,6,8,1];
+ for(let i=0; i<arr.length; i++ ){
+ if(arr[i]>num){
+ num=arr[i];
+ count++;
+ }}  
+ newarr.push(count);
+ count=0;
+ console.log(newarr);
