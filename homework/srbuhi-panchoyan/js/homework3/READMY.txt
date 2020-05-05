@@ -1,0 +1,17 @@
+Task1
+
+ giv sum of separator of three numbers...
+
+Task2
+
+moving the mass elements so that each element can change its places. we have an example [ 1, 4, 7, 6] [4, 1, 6, 7 ]
+
+Task3
+
+ find the mass in the longest growing intuitive length.
+ we have an example [ 1, 7, 5, 6, 8 , 1] mass, it grows two interval pieces[ 1, 7 ] , [ 5, 6, 8], in this case the answer is 3
+
+
+Task4
+
+let's say we have some text (we can present strings on a call).find the most common word in fact
