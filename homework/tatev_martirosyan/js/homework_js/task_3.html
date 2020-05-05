@@ -3,22 +3,34 @@
         <head>
                 <title>JS homework</title>
                 <meta charset='utf-8'>
-        </head>
-        <body>                                       <script>                                                let a=[8, 9, 1, 12, 5, 11, 17, 64, 10,6]; 
+	</head>
+	<body>
+	<script>
+		function arrInterval(a)
+	{
 		indexStart=0;
-		maxInterval=0;
-		for(let i=0; i<a.length; i++)
+		maxLength=0;
+		for(let i=0; i < a.length; i++)
 		{
-			if(a[i])
+			if(i+1<=a.length)
 				if(a[i]>a[i+1])
 				{
 					indexEnd=i;
-					if(maxInterval<indexEnd-indexStart+1)
-					maxInterval=indexEnd-indexStart+1;
+					if(maxLength<indexEnd-indexStart+1)
+											maxLength=indexEnd-indexStart+1;
 					indexStart=i+1;
 				}
 		}
-		console.log(maxInterval);
+		return maxLength;
+	}
+	function test(input, exp)
+	{
+		let actual=arrInterval(input);
+		if(actual===exp) 
+			console.log("OK");
+		else console.log("ERROR"); 
+	}
+	test([8, 9, 1, 7, 8,11, 17, 1, 10, 16], 5);
 
         </script>
         </body>

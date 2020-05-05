@@ -4,10 +4,40 @@
                 <title>JS homework</title>
                 <meta charset='utf-8'>
         </head>
-        <body>                                          <script>                                                let a=[1, 9, 91, 27,12, 8,4,6];                 console.log(a);
-		for(let i=0; i<a.length; i=i+2)
-			[a[i], a[i+1]]=[a[i+1], a[i]];
-		console.log(a);
+	<body>
+	<script>
+		function arrSwap(a)
+		{
+			for(let i=0; i < a.length; i=i+2)
+			[a[i], a[i+1]] = [a[i+1], a[i]];
+			return a;
+		}
+
+		function test (a, exp)
+		{
+			let actual=arrSwap(a);
+			if(actual.length===exp.length)
+			{
+	
+				for(let i=0; i < actual.length; i++)
+	
+				{
+	
+					if(a[i]!=exp[i])
+					{	
+					console.log("error");
+					return;
+					}
+				}
+			}else
+			{
+				console.log("error");
+				return;
+			}
+			console.log("Ok");
+		}
+
+		test([1, 9, 91, 27, 12, 83, 125, 545], [9, 1, 27, 91, 83, 12, 545, 125]);
         </script>
         </body>
 </html>
