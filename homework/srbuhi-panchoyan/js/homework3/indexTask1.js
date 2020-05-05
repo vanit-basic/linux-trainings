@@ -1,14 +1,14 @@
 // giv sum of separator of three numbers...
 
-function sumOfSeperator(arr, n){
-        let sum = arr.filter(num => num % n === 0).reduce((acum, curr) => acum + curr, 0);
+function sumOfSeperator(arr){
+        let sum = arr.filter(num => num % 3 == 0).reduce((acum, curr) => acum + curr, 0);
         return sum;
 }
 
 
 function test(input, expectid){
-        let actual = sumOfSeperator(input, 3);
-        if expectid === actual){
+        let actual = sumOfSeperator(input);
+        if (expectid === actual){
                 console.log('ok');
         } else {
                 console.log('error');

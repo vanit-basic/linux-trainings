@@ -21,7 +21,7 @@ console.log(reversArray(arr));
 //sample2
 let array = [1, 7, 5, 6, 8, 1];
 
-function maxInterval2(arr){
+function revArr(arr){
 	let newArr = [];
 	
 	for (let i = 0; i < arr.length; i += 2) {
@@ -32,7 +32,7 @@ function maxInterval2(arr){
 	return newArr.flat();
 }
 
-console.log(maxInterval2(array));
+console.log(revArr(array));
 
 // find the mass in the longest growing intuitive length.
 // we have an example [ 1, 7, 5, 6, 8 , 1] mass, it grows two interval pieces[ 1, 7 ] , [ 5, 6, 8], in this case the answer is 3

@@ -30,7 +30,7 @@ function test(input, expected){
 	}
 }
 
-test('it is a very very very nace musik of a day', 3);
-test('the color of the rainbow is the red color green color yellow color purple color blue color skyblue color', 7)
+test('it is a very very very nace musik of a day', 'very');
+test('the color of the rainbow is the red color green color yellow color purple color blue color skyblue color', 'color')
 
 
