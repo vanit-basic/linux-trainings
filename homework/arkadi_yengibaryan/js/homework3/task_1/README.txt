@@ -1,0 +1,1 @@
+calculate the sum of all numbers in the mass that are divided by three

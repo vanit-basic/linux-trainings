@@ -1,0 +1,1 @@
+move elements mass this way [ 1, 4, 7, 6 ] => [ 4, 1, 6, 7 ]
