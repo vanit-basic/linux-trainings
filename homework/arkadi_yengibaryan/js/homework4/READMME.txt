@@ -1,0 +1,4 @@
+Create cars object.
+1.cars must have color, year of issue,VIN, story
+2.it should be possible to create new cars and update old cars properti
+3.should be able to search for a car according to all its properties

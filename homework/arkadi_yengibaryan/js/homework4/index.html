@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="cssindex.css">
+	<title>JS homework 4</title>
+</head>
+
+<body>
+	<div class="container mt-3">
+		<div class="col-12">
+			<div class="col-4">
+				<h3>Add car</h3>
+				<p class="text-danger" id="info"></p>
+				<form id="form">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Enter name" id="name">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Enter color" id="color">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Enter year of issue" id="year">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Enter vin" id="vin">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Enter story" id="story">
+					</div>
+					<button type="submit" class="btn btn-success mb-3">Add car</button>
+				</form>
+			</div>
+			<div>
+				<table class="table table-bordered" id="carsList">
+
+				</table>
+			</div>
+			<div>
+				<select id="properties">
+					<option value="name">Name</option>
+					<option value="color">color</option>
+					<option value="vin">Vin</option>
+					<option value="story">Story</option>
+				</select>
+
+				<input type="text" id="search">
+				<table class="table table-bordered" id="searchCarsList">
+
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="jsindex.js"></script>
+</body>
+
+</html>
