@@ -1,0 +1,53 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Task 05.05</title>
+		<style>
+			.reg{
+				float: right;
+				margin-right: 10%;
+			}
+			.inform{
+				float: left;
+				margin-left: 10%;
+			}
+			.search{
+				float:right;
+			}	
+
+		</style>
+	</head>
+	<body>
+		<div class="search">
+			<input type="text" id="search" placeholder="Type color to search">
+			<input type="submit" value="search">
+			<p id="s"></p>	
+		</div>
+		<div class="reg">
+                <form onsubmit="submitHandler(event)">
+                        <h2>Add New Cars</h2>
+                        <label for="input1">Name</label><br>
+                        <input type="text" id="nameInput" name="name" placeholder="Enter car's name"><br>
+
+                        <label for="input2">Color</label><br>
+			<input type = "text" id ="colorInput" name="color" placeholder="Enter car's color"><br>
+                        <label for="input3">Date of production</label><br>
+                        <input type="text" id="yearInput" name="productionDate" placeholder="Enter year" ><br>
+
+                        <label for="input4">Identification number</label><br>
+			<input type="text" id ="VINInput" name="VIN" placeholder="Enter car's VIN"><br>
+			<label for="input5">Accidents</label><br>
+			<input type="text" id="accidentInput" name="incidents" placeholder="Enter accident"><br>
+			<input type="submit" value="Register">
+		</form>
+		</div>
+		<div class="inform">
+		<p id="info">
+			
+		</p>
+		</div>
+		<p id="out"></p>
+		<script src="../JavaScript/task0505.js"></script>
+	</body>
+</html>
