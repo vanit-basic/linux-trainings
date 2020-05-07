@@ -10,7 +10,7 @@ let sumModTree = (array) => {
     return sum;
 };
 alert(sumModTree(arr1));
- //task2
+//task2
 let arr2 = [1,2,3,4,5,6,7,8,9];
 let sortFunction = (array) => {
     for(i = 0;i < array.length;i++){
@@ -46,19 +46,41 @@ let findMaxLength = (array) =>{
 	return Math.max.apply(null,intervals);
 };
 alert(findMaxLength(arr3));
-//task 4 => 30%
-let str = "Жили-были три китайца: Як, Як-цедрак, Як-цедрак-цедрак-цедрони.Жили-были три китайки: Цыпа, Цыпа-дрыпа, Цыпа-дрыпа-дрымпампони.";
-	let searchWord = (string) => {
-		let arrStr = str.split('');    
+//task4
+let user = {
+	str : "My passions were developed very early – so early, that few would believe me – if I were to state the period – and the facts which accompanied it.",
+	modArr(string){
+		let arrStr = string.split(' ');
 		for(let i = 0;i< arrStr.length; i++){
-			if(arrStr[i] === ',' || arrStr[i] === ':' || arrStr[i] ==='.' || arrStr[i] === '?' || arrStr [i] === '-'){
-				arrStr[i] = ' ';
+			if((arrStr[i] == '.') || (arrStr[i] == '–') || (arrStr [i]) == ','){
+				arrStr.splice(i,1);
 			}
 		}
-		alert(arrStr);
-		let strTest = arrStr.join("");
-		alert(strTest)
-		let arrStr1 = strTest.split(' ');
-		alert(arrStr1);
-	};
-searchWord();
+		return arrStr;
+	},
+	mostRepetitionWord(array1){
+		let wordMaxRepet = "";
+		let maxNumRepet = 1;
+		for(let i = 0;i < array1.length; i++){
+			let numRepet = 1 + array1.filter(itemCheck1 => itemCheck1 == array1[i]).length;
+			if(maxNumRepet < numRepet){
+				wordMaxRepet = array1[i];
+				maxNumRepet = numRepet;
+			}
+		}
+		return wordMaxRepet;
+	},
+}
+alert(user.mostRepetitionWord(user.modArr(user.str)));
+	
+
+
+
+
+
+
+
+
+
+
+
