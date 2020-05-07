@@ -9,28 +9,40 @@
 	<script>
 
          //task_1	
-         let numbers = [1,2,3,5,6,2,11,13];
-         const ar =  numbers.filter(num => num %3 === 0);        
-         const sum = ar.reduce((total, ar) => {
+         let arr = [1,2,3,5,6,2,11,13];
+         function arrElementsSum(aray){
+         let sum =  arr
+		    .filter(num => num %3 === 0)        
+                    .reduce((total, ar) => {
          return total + ar 
-         }, 0);
-         console.log(sum);
+          }, 0);
+	 return sum;	 
+	 }
+         console.log(arrElementsSum(arr));
+         //test
+         test(arr,arrElementsSum(arr),9);
 
          //task_2
+         function swapElemsByPairs(aray){
          let a = 0;
-         for (let i = 0; i < numbers.length; i = i+2){
-	 a = numbers[i];
-	 numbers[i] = numbers[i+1];
-	 numbers[i+1] = a;	
+         for (let i = 0; i < aray.length; i = i+2){
+	 a = aray[i];
+	 aray[i] = aray[i+1];
+	 aray[i+1] = a;	
 	 }
-         console.log(numbers);
+	 return aray;	 
+	 }
+         console.log(swapElemsByPairs([1,2,3,4]));
+         //test  
+         test([1,2,3,4],swapElemsByPairs([1,2,3,4]),[2,1,4,3]);
 
          //task_3
-         let arr = [5,3,1,2,3,5,6,1,2]
+         let nums = [5,3,1,2,3,5,6,1,2]
+         function getMaxInterval(aray){
          let maxInterval = 0;
          arr.forEach((_,index) => {
 	 let temp = 1;
-		 while(arr[index+1] > arr[index]){
+		 while(nums[index+1] > nums[index]){
 	 temp++;
 	 index++;	 
 	         }
@@ -38,18 +50,45 @@
 	 maxInterval = temp;
 	 }
 	 });
-         console.log(maxInterval);
-
+         return maxInterval;
+         }
+         console.log(getMaxInterval(nums));
+         //test  
+         test(nums,getMaxInterval(nums),5);
+           
          //task_4
          let text = "I like apples and he likes apples too";
          let words = text.split(" ");
-         let maxCount = words.filter(x => x == words[0]).length;
-         words.filter( a => {
-  	 b = words.filter(x => x == a).length;
-	 if (maxCount < b){
-	 maxCount = b;			 
-	 console.log(a)}
-	 });
+         function mostCommonWord(aray){
+	 let wordRepeatCount = (words, word) => {
+         return words.filter(x => x == word).length;
+         }
+         let maxCount = 0;
+         let maxWord = null;
+         words.forEach( x => {
+         let count = wordRepeatCount(words, x);
+         if (maxCount < count){
+         maxCount = count;
+         maxWord = x;
+         }
+         maxCount = Math.max(count, maxCount);
+         });
+		 return maxWord;
+         }
+         console.log(mostCommonWord(words));
+         //test
+         test(words,mostCommonWord(words),"apples");
+
+         //test
+         function test (input, actual, expected){
+	  if (expected === actual){
+	 console.log("true");
+	 } else { 
+	 console.log("false")
+	  }
+	 }    
+        
+             
 		</script>	
 </body>
 </html>
