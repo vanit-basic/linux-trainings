@@ -48,19 +48,20 @@
 
 
 ////////////// task 3 2 variant/////////////////
-let arr=[1,2,3,4,1,3,1,2,3,4,5,3,2,5];
+let arr=[1,2,3,4,0,3,1,2,3,4,5,3,2,2,2];
 let newarr=[];
 let start=0;
 for (let i = 0; i < arr.length; i++) {
   if (i<arr.length-1) {
-    if (arr[i]>arr[i+1]) {
+    if (arr[i]>=arr[i+1]) {
       newarr.push(arr.slice(start,i+1).length);
       start=i+1;
     }
-  } else{
+  } else if(arr[i-1]>=arr[i]){
     newarr.push(arr.slice(start,i+1).length);
   }
 }
+console.log(newarr);
 console.log(Math.max(...newarr));
 
 //////////////   task 4  ///////////////////////

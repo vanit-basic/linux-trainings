@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+        <div class="addnewcar">
+          <form>
+            <label>vin:<br><input id="vin1" type="text"></label><br>
+            <label>mark:<br><input id="mark1" type="text"></label><br>
+            <label>year:<br><input id="year1" type="text"></label><br>
+            <label>color:<br><input id="color1" type="text"></label><br>
+            <label>Story:<br><textarea id="story1" name="mark"></textarea></label><br>
+            <input type="button" id="addcar" value="add new car">
+          </form>
+        </div>
+        <div id="carparent"></div>
+        <input type="text" id="search" onkeyup="searchinCar()" placeholder="search">
+        <select id="config">
+          <option>vin</option>
+          <option>mark</option>
+          <option>year</option>
+          <option>color</option>
+          <option>story</option>
+        </select>
+        <div id="rezult"></div>
+        <div id="mod" class="ismod">
+          <label>vin:<br><input id="vin" type="text"></label><br>
+          <label>mark:<br><input id="mark" type="text"></label><br>
+          <label>year:<br><input id="year" type="text"></label><br>
+          <label>color:<br><input id="color" type="text"></label><br>
+          <label>Story:<br><textarea id="story" rows="5" cols="33" name="mark"></textarea></label><br>
+          <input type="button" value="chang" id="butmod">
+        </div>
+<script src="main.js"></script>
+</body>
+</html>
