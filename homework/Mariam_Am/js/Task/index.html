@@ -1,29 +1,73 @@
-	<!Doctype html>
-	<html>
-		<head>
-			<script>
-				let Arr1 = [5, 45, 14, 9, 1, 13, 55, 91, 15, 215]
-	{
-		let adults = Arr1.filter(Arr1 => Arr1 % 3 == 0 )
-		console.log(adults);
-		const amount = adults.reduce((total, adults) => total + adults, 0);
-		console.log(amount);
-	}
-				let Arr2 = [15, 5, 23, 4, 8, 25];
+			<!Doctype html>
+				<html>
+					<head>
+						<script>
+							//task1
+							let Arr1 = [5, 45, 14, 9, 1, 13, 55, 91, 15, 215]
+				{
+					let adults = Arr1.filter(Arr1 => Arr1 % 3 == 0 )
+					const amount = adults.reduce((total, adults) => total + adults, 0);
+					console.log(amount);
+				}
+							let Arr2 = [15, 5, 23, 4, 8, 25];
+					let a;
+					for(let i=0; i < Arr2.length; i=i+2)
+					{
+							a = Arr2[i];
+							Arr2[i] = Arr2[i+1];
+							Arr2[i+1] = a;
+					}
+					console.log(Arr2);
+          //task2
+		let Arr2 = [15, 5, 23, 4, 8, 25];
 		let a;
-		for(let i=0; i < Arr2.length; i=i+2)
-		{
-				a = Arr2[i];
-				Arr2[i] = Arr2[i+1];
-				Arr2[i+1] = a;
-		}
-		console.log(Arr2);
-	</script>
-		
-		</head>
-		<body>
-		</body>
-	</html>	
-
+			for(let i=0; i < Arr2.length; i=i+2)
+				{
+						a = Arr2[i];
+					Arr2[i] = Arr2[i+1];
+						Arr2[i+1] = a;
+				}
+				console.log(Arr2);
+			//task3
+			let A = [1, 2, 3, 5, 7, 5, 4, 2, 5, 8, 4]
+					function getMaxInterval(arr){
+					let max = 0;
+					arr.forEach((_,index) => {
+				let temp = 1;
+					while(A[index+1] > A[index]){
+				temp++;
+				index++;	 
+						}
+					if (temp > max){
+				max = temp;
+				}
+				});
+					return max;
+					}
+					console.log(getMaxInterval(A));
+					
+             // task4
+					let wordRepeatCount = (words, word) => {
+			return words.filter(x => x == word).length;
+			}
+			let text = "Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. In the articles listed below, we'll cover all the essential aspects of structuring, styling, and interacting with web forms.";
+			let words = text.split(" ");
+			let maxCount = 0;
+			let maxWord = null;
+			words.foreach( x => { 
+			let count = wordRepeatCount(words, x);
+			if (maxCount < count){
+				maxCount = count;		
+				maxWord = x;
+			}
+		maxCount = Math.max(count, maxCount);
+			});
+				</script>
+					
+					</head>
+					<body>
+					</body>
+				</html>	
+				}
 
 
