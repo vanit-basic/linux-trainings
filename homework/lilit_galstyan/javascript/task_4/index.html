@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Cars </title>
+		<meta charset = 'UTF-8'>
+	</head>
+
+	<body>
+		<form onsubmit='submitHandler(event)' id="form">
+			<label for="input1">Data</label><br>
+			<input type="text" id="nameInput" name="name" placeholder="Enter any data for car"><br>
+                                      
+			<label for="input2">Keywords</label><br>
+			<input type="text" id="keywordInput" name="keyword" placeholder="Enter keyword for accident"  ><br>
+
+
+			<input  type="submit" value="ok">
+                        <button onclick="replace()" >to create</button>  
+                        <div id="info">
+				<p></p>
+                        </div>
+		</form>
+
+		<script src='datas.js'></script>
+	        <script>
+
+		document.body.onload = () => addInfo();
+		function addInfo() {
+	        for (let i = 0; i < carDatas.length; i++) {
+		const div = document.createElement('div');
+		div.className = 'formElem';
+
+		const name = document.createElement('name');
+		name.innerHTML = carDatas[i].Name;	
+		div.appendChild(name);
+
+		const year = document.createElement('year');	
+		year.innerHTML = carDatas[i].Year;	
+		div.appendChild(year);
+		
+		const accident = document.createElement('accident');
+		accident.innerHTML = carDatas[i].accident;
+		div.appendChild(accident);	
+
+		document.getElementById('form').appendChild(div);
+	}
+		}
+               let dat = document.getElementById('nameInput').value;
+               let word = document.getElementById('keywordInput').value;
+               function submitHandler(event) {
+	        event.preventDefault();
+		console.log(searchByDatas(dat));
+	        console.log(searchByAccident(word));	
+	        };
+               function searchByDatas(data){
+		  let result = "Sorry, we dont have car like that";     
+                  for (let i = 0; i < carDatas.length; i++){
+                  let values = Object.values(carDatas[i]);
+			  if (values.includes(data) && data){
+				  result = carDatas[i];
+			  }
+		    };
+		     return result; 
+	        };
+                function searchByAccident(keyword){
+		let result = "Sorry, we dont have car like that";
+                  for (let i = 0; i < carDatas.length; i++){
+			if  (carDatas[i].accident.includes(keyword) && keyword){
+				result = carDatas[i];
+			}
+		  } ;
+			return result;
+		}
+                function replace() {
+			location.replace('./index_4.html');
+		 }
+		</script>
+	</body>
+</html>

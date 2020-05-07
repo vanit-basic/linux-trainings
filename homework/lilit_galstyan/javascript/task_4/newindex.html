@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Create car</title>
+		<meta charset='utf-8'>
+		</head>
+	<body>
+		<form onsubmit='submitHandler(event)' id="">
+			<label for="input1">Name</label><br>
+			<input type="text" id="nmInput" name="name" placeholder="Enter your name" required><br>
+
+			<label for="input2">Year</label><br>
+			<input type="test" id="yearInput" name="year" placeholder="Enter car year" required ><br>
+
+			<label  for="input3">Color</label><br>
+			<input type="text" id="colorInput" name="color" placeholder="Enter car color" required><br><br>
+
+			<input  type="submit" value="create">
+                        <div id="">
+                        <p></p>
+                        </div>
+		</form>
+		<script src="datas.js"></script>
+	<script>
+                	let name = document.getElementById('nmInput').value;
+                	let year = document.getElementById('yearInput').value;
+                	let color = document.getElementById('colorInput').value;
+                          function submitHandler(event) {
+				event.preventDefault();
+			console.log(createCar(name,year,color));
+			}
+
+                        function createCar (name, color, year){
+				let newCar = {
+				Name: name,
+				Year: year,
+				Color: color,	
+				}
+				if (newCar){
+				carDatas.push(newCar);
+				}
+				return carDatas;
+			}
+                        
+	</script>
+		</body>
+</html>
