@@ -80,7 +80,7 @@ function creatNewCar() {
       "<div class='config'>"+car[car.length-1]['year']+"</div>"+
       "<div class='config'>"+car[car.length-1]['color']+"</div>"+
       "<div class='config'>"+car[car.length-1]['text']+"</div>"+
-      "<div class='config'><input type='submit' value='change text' onclick='openmod("+i+")'></div>"+
+      "<div class='config'><input type='submit' value='change text' onclick='openmod("+endelement+")'></div>"+
     "</div>";
   carparent.innerHTML+=parentinnerhtml; 
 }

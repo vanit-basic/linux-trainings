@@ -17,14 +17,23 @@
             <input type="button" id="addcar" value="add new car">
           </form>
         </div>
-        <div id="carparent"></div>
+        <div id="carparent">
+          <div class="items">
+            <div class="item">vin</div>
+            <div class="item">mark</div>
+            <div class="item">year</div>
+            <div class="item">color</div>
+            <div class="item">story</div>
+            <div class="item">update</div>
+          </div>
+        </div>
         <input type="text" id="search" onkeyup="searchinCar()" placeholder="search">
         <select id="config">
           <option>vin</option>
           <option>mark</option>
           <option>year</option>
           <option>color</option>
-          <option>story</option>
+          <option>text</option>
         </select>
         <div id="rezult"></div>
         <div id="mod" class="ismod">

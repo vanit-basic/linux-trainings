@@ -1,10 +1,10 @@
 body {
-    height: 2000px;
+    min-height: 2000px;
 }
 .config{
     padding: 5px;
     margin: 5px;
-    width:auto;
+    width:20%;
     height: 20px;
     background: #AFCDE7;
 }
@@ -13,6 +13,20 @@ body {
     display:flex;
     background: khaki;
     margin: 10px;
+}
+.items{
+    justify-content: space-around;
+    display:flex;
+    background: rgb(140, 155, 240);
+    margin: 10px;
+    text-align: center;
+}
+.item{
+    padding: 5px;
+    margin: 5px;
+    width:20%;
+    height: 20px;
+    color: lightcyan;
 }
 .ismod {
     text-align: center;
