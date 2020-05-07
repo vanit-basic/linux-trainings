@@ -16,9 +16,20 @@
 
 
 			<input  type="submit" value="ok">
-                        <button onclick="replace()" >to create</button>  
-                        <div id="info">
+                        <button onclick="replace()" >to create</button> 
+			<div id="info"></div>
+                        <div id="resultInfo">
 				<p></p>
+				
+                                <li id="name">
+					
+					<li id="year"> </li>
+			<!--		<li id="accident"> </li>
+					<li id="color"> </li>
+			<li id="vin"> </li>-->
+					
+				</li>
+                                
                         </div>
 		</form>
 
@@ -29,51 +40,67 @@
 		function addInfo() {
 	        for (let i = 0; i < carDatas.length; i++) {
 		const div = document.createElement('div');
-		div.className = 'formElem';
+		const nm = document.createElement('name');	
+		const yr = document.createElement('year');	
 
-		const name = document.createElement('name');
+		const name = document.createElement('p');
 		name.innerHTML = carDatas[i].Name;	
-		div.appendChild(name);
+		nm.appendChild(name);
 
-		const year = document.createElement('year');	
+		const year = document.createElement('p');	
 		year.innerHTML = carDatas[i].Year;	
 		div.appendChild(year);
 		
-		const accident = document.createElement('accident');
+		const accident = document.createElement('p');
 		accident.innerHTML = carDatas[i].accident;
 		div.appendChild(accident);	
 
-		document.getElementById('form').appendChild(div);
+                document.getElementById('info').appendChild(div);
+		document.getElementById('info').appendChild(nm);	
+		document.getElementById('name').appendChild(yr);	
 	}
 		}
                let dat = document.getElementById('nameInput').value;
                let word = document.getElementById('keywordInput').value;
-               function submitHandler(event) {
+               function submitHandler(event) {		       
 	        event.preventDefault();
-		console.log(searchByDatas(dat));
-	        console.log(searchByAccident(word));	
+		searchByDatas(dat);
+	        searchByAccident(word);
+		remove();       
 	        };
                function searchByDatas(data){
-		  let result = "Sorry, we dont have car like that";     
+		  let result = "Sorry, we dont have car with that data";     
                   for (let i = 0; i < carDatas.length; i++){
                   let values = Object.values(carDatas[i]);
 			  if (values.includes(data) && data){
 				  result = carDatas[i];
 			  }
 		    };
-		     return result; 
+		const div = document.createElement('div');
+		const datas = document.createElement('p');
+		datas.innerHTML =Object.values(result);
+		div.appendChild(datas);	
+                document.getElementById('resultInfo').appendChild(div);
 	        };
                 function searchByAccident(keyword){
-		let result = "Sorry, we dont have car like that";
-                  for (let i = 0; i < carDatas.length; i++){
-			if  (carDatas[i].accident.includes(keyword) && keyword){
+		let result = "Sorry, we dont have car with story like that";
+                for (let i = 0; i < carDatas.length; i++){
+		if  (carDatas[i].accident.includes(keyword) && keyword){
 				result = carDatas[i];
 			}
 		  } ;
-			return result;
-		}
+		const div = document.createElement('div');
+		const accident = document.createElement('p');
+		accident.innerHTML = Object.values(result);
+		div.appendChild(accident);	
+                document.getElementById('resultInfo').appendChild(div);
+		};
+                function remove(){
+		let elem = document.getElementById('info');
+		elem.parentNode.removeChild(elem);	
+		};  
                 function replace() {
-			location.replace('./index_4.html');
+			location.replace('./newindex.html');
 		 }
 		</script>
 	</body>
