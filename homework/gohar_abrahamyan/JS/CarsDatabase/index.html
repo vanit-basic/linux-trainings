@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>CARS</title>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+	</head>
+	<body>
+		<div id="content">
+			<h2>Fill in the fields to add new car</h2>
+			<form onsubmit='submitHandler(event)'>
+				<label for="input1">Car name</label><br>
+				<input type="text" id="nameInput" name="name" ><br>
+				<label for="input2">Color</label><br>
+				<input type="text" id="colorInput" name="color" ><br>
+				<label for="input3">Year of manufacture</label><br>
+				<input type="date" id="yearInput" name="year" ><br>
+				<label for="input4">VIN code</label><br>
+				<input type="number" id="vinInput" name="VIN" ><br>
+				<label for="input5">Accident story</label><br>
+				<input type="text" id="storyInput" name="story" ><br>
+				<input type="submit" value="ADD">
+			</form>
+		</div>
+		<script src='./JS/cars.js'></script>
+	</body>
+</html>

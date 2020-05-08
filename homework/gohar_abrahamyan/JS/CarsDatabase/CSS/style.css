@@ -1,0 +1,26 @@
+#content {
+	border: 2px solid #f1f1f1;
+	width: 40%;
+	margin: 40px auto;
+	padding: 20px;
+	
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px auto;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}	
+ label {
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+input[type=submit] {
+  background-color: #3081d2;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
