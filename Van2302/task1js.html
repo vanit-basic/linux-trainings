@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task1_JS</title>
+</head>
+
+<body>
+    <script>
+
+        let count = 0;
+        let array = [2, 3, 6, 8, 9, 11, 15];
+        array.forEach(i => { if (i % 3 == 0) { count += i; } });
+        let newarray = array.filter(i => (i % 3 == 0));
+        console.log(array);
+        console.log(newarray);
+        console.log(count);
+
+        console.log('-------second version-----');
+        let summ = array.filter((item) => item % 3 === 0).reduce((prev, next) => prev + next);
+        console.log(summ)
+    </script>
+
+</body>
+
+</html>
