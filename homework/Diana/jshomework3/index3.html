@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <script>
+    function someWord(string){
+        let str = string.split(" ");
+        let max=0;
+        let arr = [... new Set(str)];
+        let wcount;
+    
+        for(let i = 0; i < arr.length; i++){
+            let count = 0;
+            for(let j= 0; j < str.length;j++){
+                if (arr[i] === str[j]){
+                    count++;
+                    if ( max < count) {
+                        max = count;
+                        wcount = arr[i];
+                    }
+                } 
+            }
+        }
+        return wcount;
+    }
+    console.log(someWord(string));
+
+    function test(input, expected){
+	let actual = someWord(input);
+	if (actual === expected)
+	{
+		console.log('ok');
+	} else {
+		console.log('error');
+	}
+}
+    </script>
+</body>
+</html>
