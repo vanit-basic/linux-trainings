@@ -55,7 +55,14 @@ let info = [
 		"Color": "silver",
 		"Year": "2004",
 		"VIN": "2354lkjg",
-		"Incidents": "fllod"
+		"Incidents": "flood"
+	},
+	{
+		"Name": "Ferrari 458 Italia Speciale",
+		"Color": "red",
+		"Year": "2013",
+		"VIN": "4asdf7lkjh",
+		"Incidents": "no"
 	},
 	{
 		"Name": "Toyota Prius",
@@ -63,6 +70,34 @@ let info = [
 		"Year": "2001",
 		"VIN": "4987lkjh",
 		"Incidents": "yes"
+	},
+	{
+		"Name": "Renault Avantime",
+		"Color": "blue",
+		"Year": "2001",
+		"VIN": "96527lkjh",
+		"Incidents": "no"
+	},
+	{
+		"Name": "Porsche Carrera GT",
+		"Color": "silver",
+		"Year": "2003",
+		"VIN": "klgd12354kjh",
+		"Incidents": "yes"
+	},
+	{
+		"Name": "Ferrari 458 Italia",
+		"Color": "red",
+		"Year": "2009",
+		"VIN": "lkjd2357uyf",
+		"Incidents": "crash"
+	},
+	{
+		"Name": "Jaguar F-Pace",
+		"Color": "white",
+		"Year": "2015",
+		"VIN": "4a6n7d312ymu632rr48ay",
+		"Incidents": "no"
 	},
 ]
 for(let i=0; i<info.length;i++){
@@ -75,15 +110,14 @@ function submitHandler(event) {
 	event.preventDefault();
 	regcar();
 }
-/*let colorSearch = (info,color) => {
-	let carColor = info.forEach(car => {if(car.Color===color) document.getElementById("s").innerHTML = car})
-}*/
-/*let nameSearch = (info,name) => {
-	let carName = info.forEach(car => {if(car.Name===name) document.getElementById("s").innerHTML = car})
-}*/
-/*let accidentSearch = (info,accident) => {
-	let carAccident = info.forEach(car => {if(car.Accident===color) document.getElementById("s").innerHTML = car})
-}*/
-/*let yearSearch = (info,year) => {
-	let carYear = info.forEach(car => {if(car.Year===year) document.getElementById("s").innerHTML = year})
-}*/
+let colorSearch = (info,property) => {
+	let carProperty  =info.forEach(car => {
+		for(let [key,value] of Object.entries(car)){if(value===property){for(let [key,value] of Object.entries(car))
+			document.getElementById("s").innerHTML += `${key}: ${value}<br>`;
+		
+	document.getElementById("s").innerHTML += `<hr>`}}})}
+document.getElementById("btn").onclick = function() {search(info)};
+let search = (info) =>{
+const property = document.getElementById("search").value.trim();
+colorSearch(info,property);
+}
