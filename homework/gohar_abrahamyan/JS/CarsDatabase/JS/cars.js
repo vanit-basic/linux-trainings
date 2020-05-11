@@ -1,4 +1,4 @@
-class Car {
+/*class Car {
   
 	constructor(name, color, year, vin,story) {
 	  this.name = name
@@ -36,4 +36,19 @@ function submitHandler(event) {
 	validation();
 }
 
-console.log(carsDB.cars)
+console.log(carsDB.cars)*/
+let apiCall = async (api) => {
+  const apiRoot = 'https://69b984ce-c008-4f84-a99d-2e73df46a586.mock.pstmn.io';
+  const request = `${apiRoot}${api}`;
+  console.log(request);
+  let response = await fetch(request);
+  let json = await response.json();
+  return json;
+}
+
+let allCars = apiCall('/CarsList');
+console.log(allCars);
+let redCars = apiCall('/CarsList?color:red');
+console.log(redCars);
+let uniqueCar = apiCall('/CarsList?d=5641');
+console.log(uniqueCar);
