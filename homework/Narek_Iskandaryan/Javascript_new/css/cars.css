@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+    padding-top: 30px
+}
+#modalWindow{
+    border: solid red;
+    margin-top: 4%; 
+    display: none
+}
+#modalWindow p{
+    padding: 10%;
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+}
+.modalwin{
+    text-align: center
+}

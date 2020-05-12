@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>task 5</title>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/cars.css">
+	</head>
+	<body>
+        <div class="row" id="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <form onsubmit='addCar(event)'>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter the car name"><br><br>
+
+                    <label for="color">Choose a color</label>
+                    <input type="color" id="color" name="color" placeholder="Choose a color">
+
+                    <label for="year">Choose a year</label>
+                    <select id="year">
+                      <option value="1970">1970</option>
+                    </select><br><br>
+
+                    <label for="vin">Vin</label>
+                    <input type="number" id="vin" name="vin" placeholder="Enter the car vin" ><br><br>
+
+                    <label for="accident">story of accident</label><br>
+                    <textarea id="accident" rows="4" cols="50"></textarea><br><br>
+
+                    <input type="submit" value="Add the car" class="submit">
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <form onsubmit='searchCar(event)'>
+                    <label for="name_1">Name</label>
+                    <input type="text" id="name_1" name="name" placeholder="Enter the car name"><br><br>
+
+                    <label for="color_1">Choose a color</label><br>
+                    <input type="color" id="color_1" name="color" placeholder="Choose a color">
+                    <input type="checkbox" id="check_1"><br>
+
+                    <label for="year_1">Choose a year</label><br>
+                    <select id="year_1" class="year">
+                      <option value="1970">1970</option>
+                    </select>
+                    <input type="checkbox" id="check_2"><br><br>
+
+                    <label for="vin_1">Vin</label>
+                    <input type="number" id="vin_1" name="vin" placeholder="Enter the car vin" ><br><br>
+
+                    <label for="accident_1">story of accident</label><br>
+                    <textarea id="accident_1" rows="4" cols="50"></textarea><br><br>
+
+                    <input type="submit" value="Search the car" class="search">
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row modalwin">
+            <div class="col-md-3"></div>
+            <div class="col-md-6" id="modalWindow">
+                <p></p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+		<script src="js/addCar.js"></script>
+	</body>
+</html>
