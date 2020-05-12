@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<meta charset = "utf-8">
+<title>
+Car 
+</title>
+</head>
+<fieldset>
+ 
+  <label> Here is  array of ojects connected with cars</label>
+  <textarea rows="10" id="arrayOfObjects">
+ [
+   {
+      "name":"chevrolet chevelle malibu",
+      "color":"white",
+      "year":"1970-01-01",
+      "accident": "flood"
+      
+   },
+   {
+      "name":"buick skylark 320",
+      "color":"black",
+      "year":"1970-01-01",
+      "accident":"crush"
+
+   },
+{
+       "name":"ford torino",
+       "color":"red",
+      "accident": "no accident",
+      "year":"1970-01-01"
+     
+   },
+     
+{     "name":"chevrolet impala",
+      "color":"red",
+      "accident": "cruch",
+      "Year":"1970-01-01"
+      
+   },
+      {
+    "name":"toyota corolla",
+       "color":"solid",
+       "accident": "run over",
+      "Year":"1976-01-01"
+      
+}
+]
+  </textarea>
+
+  <hr>
+
+  <label> Cars property name: </label> <input type="text" id="propertyName"  value="b"/>
+  <label>Cars property value: </label> <input type="text" id="propertyValue" value=6 />
+     
+</fieldset>
+<hr>
+<button onclick="findObject()">Find car by its property!</button>
+<hr>
+<fieldset>
+  <label>Searching Result:</label>
+  <pre id = "search">Find info about car</pre>
+</fieldset>
+
+<script>
+function getObjByValue(objectsArray, propertyName, propertyValue) {
+  return objectsArray.find(function (objArrayElem) {
+    return objArrayElem[propertyName] == propertyValue;
+  });
+}
+
+function findObject () {
+  let arrayOfObjString = document.getElementById("arrayOfObjects").value,
+      arrayOfObjects,
+      propertyName = document.getElementById("propertyName").value,
+      propertyValue = document.getElementById("propertyValue").value,
+      search = document.getElementById("search"),
+      searchingObject;
+  
+  arrayOfObjects = JSON.parse(arrayOfObjString);
+  
+ 
+  
+  if(arrayOfObjects && propertyName && propertyValue) {
+    searchingObject = getObjByValue(arrayOfObjects, propertyName, propertyValue);
+    if(searchingObject) {
+      search.innerHTML = JSON.stringify(searchingObject);
+    } else {
+     search.innerHTML = "there is no object with property " + propertyName + " = " + propertyValue + " in your array of objects";
+    }
+  }
+}
+</script>
+</html>
