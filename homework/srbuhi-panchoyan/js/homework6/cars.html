@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<meta charset="UTF-8"></meta>	
+	<script type="text/javascript" src="./index.js"></script>
+	<link rel="stylesheet" type="text/css" href="./cars.css">
+</head>
+<body>
+	<h1>HISTORY of CARS</h1>
+	<hr>
+	<div>
+		
+		<form  class="inputCar">
+			<label>Input type car</label>
+			<input type="type" name="type" value="type" id="type"><br><br>
+			<label>Input model car</label>
+			<input type="text" name="model" id="model" value="model"><br><br>
+			<label>Input color car</label>
+			<!--<input type="text" name="color" id="color" value="color"><br><br>-->
+			<select name="color" id="color">
+				<option value="red">red</option>
+				<option value="green">green</option>
+				<option value="blue">blue</option>
+				<option value="black">black</option>
+				<option value="white">white</option>
+			</select><br><br>
+			<label>Input date car</label>
+			<input type="" name="date" id="date" value="date"><br><br>
+			<label>Input vin for car: </label>
+			<input type="" name="VIN" id="vin" value="vin"><br><br>
+			<label>Input Accident</label>
+			<select name="Accident" id="accident">
+				<option value="flood">flood</option>
+				<option value="accident">accident</option>
+				<option value="other">other</option>
+			</select>
+			<input type="submit" value="Submit" id="sabmit" onclick="addCar()">
+		</form>
+		<hr>
+		<h2>Search car</h2>
+		<form>
+			<div>
+				<label>search by type</label>
+				<input type="text" name="type">
+				<input type="button" value="Go" onclick="findCarByType()">
+			</div>
+			<div>
+                                <label>search by VIN</label>
+                                <input type="text" name="vin">
+                                <input type="button" value="Go" onclick="findCarByVin()">
+                        </div>
+			<div>
+                                <label>search by accident</label>
+                                <input type="text" name="accident">
+                                <input type="button" value="Go" onclick="findCarByAccident()">
+                        </div>
+			<div>
+                                <label>search by color</label>
+                                <select name="color" id="color">
+					<option value="red">red</option>
+					<option value="green">green</option>
+					<option value="blue">blue</option>
+					<option value="black">black</option>
+					<option value="white">white</option>
+				</select>
+                                <input type="button" value="Go" onclick="findCarByColor()">
+                        </div>
+		</form>
+		<hr>
+		<p id="p">list of car is <br></p>	
+</body>
+</html>
