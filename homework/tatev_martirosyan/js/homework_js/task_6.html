@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Task 6</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	<script>
+		function anagrama(str1, str2)
+		{
+			let str=str1.split("").reverse().join("");
+			console.log(str);
+			if(str==str2)
+			return "yes";
+			else
+			return "no";
+		
+		}
+		function test(input1,input2, exp)
+		{
+			let actual=anagrama(input1, input2);
+			if(actual===exp)
+			console.log("OK");
+			else
+			console.log("ERROR");
+		
+		}
+		test("lenin", "ninel", "yes");
+		test("apple", "lemon", "no");
+		
+	</script>
+	</body>
+	</html>

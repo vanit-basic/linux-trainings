@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Task 5</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	<script>
+		function polindrom(str)
+		{
+			let n=str.length;
+			for(let i=0;i<n/2;i++)
+			{
+				if(str[i]!=str[n-1-i])
+					return false;		
+			}
+			return true;
+		}
+		function test(input, exp)
+		{
+			let actual=polindrom(input);
+			if(actual==exp)
+			console.log("OK");
+			else
+			console.log("ERROR");
+		}
+		test("level", true);
+		test("anna", true);
+		test("server", false);
+	</script>
+	</body>
+	</html>
