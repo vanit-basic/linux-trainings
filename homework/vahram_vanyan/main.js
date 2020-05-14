@@ -48,21 +48,21 @@
 
 
 ////////////// task 3 2 variant/////////////////
-let arr=[1,2,3,4,0,3,1,2,3,4,5,3,2,2,2];
-let newarr=[];
-let start=0;
-for (let i = 0; i < arr.length; i++) {
-  if (i<arr.length-1) {
-    if (arr[i]>=arr[i+1]) {
-      newarr.push(arr.slice(start,i+1).length);
-      start=i+1;
-    }
-  } else if(arr[i-1]>=arr[i]){
-    newarr.push(arr.slice(start,i+1).length);
-  }
-}
-console.log(newarr);
-console.log(Math.max(...newarr));
+// let arr=[1,2,3,4,0,3,1,2,3,4,5,3,2,2,2];
+// let newarr=[];
+// let start=0;
+// for (let i = 0; i < arr.length; i++) {
+//   if (i<arr.length-1) {
+//     if (arr[i]>=arr[i+1]) {
+//       newarr.push(arr.slice(start,i+1).length);
+//       start=i+1;
+//     }
+//   } else if(arr[i-1]>=arr[i]){
+//     newarr.push(arr.slice(start,i+1).length);
+//   }
+// }
+// console.log(newarr);
+// console.log(Math.max(...newarr));
 
 //////////////   task 4  ///////////////////////
 // let text='aaa b bbb aaa b';
@@ -82,3 +82,16 @@ console.log(Math.max(...newarr));
 //   });
 //   console.log(elem+":"+count);
 // });
+
+//////////////////  task5 palidrom function    //////////////////////
+// function palindrom(str){
+//   str=str.toLowerCase().replace(/\s/g,'');
+//   return str===str.split('').reverse().join('');
+// }
+// console.log(palindrom('Qaxaq qaxaq'));
+
+///////////////////  task6 anagram function  ////////////////////////
+function Anagram(first,second) {
+	return second.toLowerCase().split('').sort().join()===first.toLowerCase().split('').sort().join()
+}
+console.log(Anagram('asdfg','asdgf'));
