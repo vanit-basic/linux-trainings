@@ -22,43 +22,38 @@
 				<p></p>
 				
                                 <li id="name">
-					
 					<li id="year"> </li>
-			<!--		<li id="accident"> </li>
-					<li id="color"> </li>
-			<li id="vin"> </li>-->
-					
 				</li>
-                                
                         </div>
 		</form>
 
 		<script src='datas.js'></script>
 	        <script>
-
-		document.body.onload = () => addInfo();
-		function addInfo() {
-		const div = document.createElement('div');
-
-                let apiCall = async (api) => {
-                const apiRoot = 'https://cd613c04-1e6d-4d04-b8ff-5530dd76bcd0.mock.pstmn.io/';
-                const request = `${apiRoot}${api}`;
-                console.log(request);
-                let response = await fetch(request);
-                let json = await response.json();
-                return json;
+		
+		let apiCall = async (api) => {
+		  const apiRoot = "https://652297e7-74e2-485b-9e4d-752866994db4.mock.pstmn.io";	
+                  const request = `${apiRoot}${api}`;
+                  console.log(request);
+                  let response = await fetch(request);
+                  let json = await response.json();
+                  return json;
                 }
-		let allCars = apiCall('/cars');	
-		allCars.then((val) => {
-                console.log(val);
-		for(let i = 0; i < val.length;i++){
-                const datas = document.createElement('p');    
-                datas.innerHTML = Object.values(val[i]);
-                div.appendChild(datas);
-		document.getElementById('info').appendChild(div);
-		}
-		});
-		}
+                let allCars = apiCall('/cars');
+		document.body.onload = () => addInfo(allCars);
+                        
+		function addInfo(a) {
+		 a.then((val) => {
+                 console.log(val);
+		   for(let i = 0; i < val.length;i++){
+		   const div = document.createElement('div');
+                   const datas = document.createElement('ul');    
+                   datas.innerHTML = Object.values(val[i]);
+                   div.appendChild(datas);
+		   document.getElementById('resultInfo').appendChild(div);
+		   }
+		 });
+		};
+
                let dat = document.getElementById('nameInput').value;
                let word = document.getElementById('keywordInput').value;
                function submitHandler(event) {		       
@@ -67,38 +62,43 @@
 	        searchByAccident(word);
 		remove();       
 	        };
+
                function searchByDatas(data){
-		  let result = "Sorry we dont have car with that data";     
-                  for (let i = 0; i < carDatas.length; i++){
-                  let values = Object.values(carDatas[i]);
-			  if (values.includes(data) && data){
-				  result = carDatas[i];
-			  }
-		    };
-		const div = document.createElement('div');
-		const datas = document.createElement('p');
-		datas.innerHTML =Object.values(result);
-		div.appendChild(datas);	
-                document.getElementById('resultInfo').appendChild(div);
-	        };
+		       if ((data == "white") && data){
+                         result = apiCall('/cars?color=white');
+			       addInfo(result);}
+		        else if ((data == "black") && data){
+                               result = apiCall('/cars?color=black');
+				addInfo(result);
+			       } 
+		       else if ((data == "brown") && data){
+                               result = apiCall('/cars?color=brown');
+			       addInfo(result);
+		       }
+                }
                 function searchByAccident(keyword){
-		let result = "Sorry we dont have car with story like that";
-                for (let i = 0; i < carDatas.length; i++){
-		if  (carDatas[i].accident.includes(keyword) && keyword){
-				result = carDatas[i];
+			if ((keyword == "bla") && keyword){
+                         result = apiCall('/cars?accident=bla');
+		         addInfo(result);
 			}
-		 
-		  } ;
-		const div = document.createElement('div');
-		const accident = document.createElement('p');
-		accident.innerHTML = Object.values(result);
-		div.appendChild(accident);	
-                document.getElementById('resultInfo').appendChild(div);
+		        else if ((keyword == "flooded") && keyword){
+                        result = apiCall('/cars?accident=flooded');
+			addInfo(result);
+			}
+                        else if ((keyword == "crushed") && keyword){
+                        result = apiCall('/cars?accident=cushed');
+			addInfo(result);
+			}
+			else if ((keyword == "not accidental") && keyword){
+                        result = apiCall('/cars?accident=dont');
+			addInfo(result);
+			}
 		};
                 function remove(){
 		let elem = document.getElementById('info');
 		elem.parentNode.removeChild(elem);	
 		};  
+
                 function replace() {
 			location.replace('./newindex.html');
 		 }
