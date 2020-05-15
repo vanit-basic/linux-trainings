@@ -1,15 +1,8 @@
 function checkPalindrome(text) {
-    let revStr = text.split('').reverse();
-
-    for (let i = 0; i < revStr.length; i++) {
-        if (revStr[i] != text[i]) {
-            return 'no'
-        }
-    }
-
-    return 'yes';
+    if (text.toLowerCase() == text.toLowerCase().split('').reverse().join('')) return 'yes';
+    return 'no';
 }
 
-let a = 'abc';
+console.log(checkPalindrome('Acbbca'));
 
-console.log(checkPalindrome('aba'));
+// console.log('AAA'.toLowerCase());

@@ -1,0 +1,1 @@
+Define index of all primes numbers in an array

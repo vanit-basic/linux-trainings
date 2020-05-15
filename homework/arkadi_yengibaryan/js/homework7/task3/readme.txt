@@ -1,0 +1,1 @@
+Determine the sum of the digits of all elements of the array
