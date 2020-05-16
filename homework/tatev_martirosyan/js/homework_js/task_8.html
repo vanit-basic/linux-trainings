@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>JS</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	<script>
+	function parz (a)
+	{
+	let newArr=[];
+	a.forEach((value,index,arr)=>{
+	s=0;
+	for(let i=2;i<value;i++)
+	{if(value%i==0)
+	s++;}
+	if(s==0)
+	newArr.push(index);
+	});
+	return newArr;}
+	console.log(parz([3,4,9,12,17,21,22]));
+	</script>
+	</body>
+	</html>
+	

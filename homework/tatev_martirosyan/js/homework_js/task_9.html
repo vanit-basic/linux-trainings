@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>JS</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	<script>
+	function bubbleSort(a)
+	{
+		for(let j=0;j<a.length;j++)
+		{
+			for(let i=0;i<a.length-j-1;i++)
+			{
+				if(a[i]>=a[i+1])
+				[a[i],a[i+1]]=[a[i+1],a[i]];
+			}
+			//console.log(a);
+		}
+		return a;
+	}
+	let arr=[1, 7, 91, 27,5,32, 12, 83, 29];
+	console.log(arr);
+	console.log(bubbleSort(arr));
+	</script>
+	</body>
+	</html>
+	
