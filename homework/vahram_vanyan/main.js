@@ -91,7 +91,47 @@
 // console.log(palindrom('Qaxaq qaxaq'));
 
 ///////////////////  task6 anagram function  ////////////////////////
-function Anagram(first,second) {
-	return second.toLowerCase().split('').sort().join()===first.toLowerCase().split('').sort().join()
-}
-console.log(Anagram('asdfg','asdgf'));
+// function Anagram(first,second) {
+// 	return second.toLowerCase().split('').sort().join()===first.toLowerCase().split('').sort().join()
+// }
+// console.log(Anagram('asdfg','asdgf'));
+
+
+/////// task 7 masivi meji bolor tveri tvanshanneri gumary////////////
+// let toStringNumberSum=(arr)=>{
+//     let sum=0;
+//     [...arr.join('')].forEach(el=>{
+//         sum+=+el;
+//     });
+//     console.log(sum);
+// }
+// toStringNumberSum([11,22,33]);
+
+///////////// task8 veradarcnum  aparz tvern u parz tveri indexy////////
+// let isPrime=(num)=>{
+//     for (let i = 2; i <= Math.sqrt(num);) {
+//       if (num % i == 0) return false;
+//       i == 2 ? i++ : i += 2;
+//     }
+//     return num>1;
+// }
+// let primeIndex=(arr)=>{
+//     let arrindex=[];
+//     arr.forEach((elem,index,arr)=>{
+//         if(isPrime(elem)) arrindex.push(index);
+//     });
+//     return arrindex;
+// }
+
+
+////////////////  task9 pxpxjakajin sortavorum  /////////////////////
+// let A=[5,1,3,2,4];
+// let puzirok=(arr)=>{
+//     for (let j = 0; j < arr.length-1; j++) {
+//         for (let i = 0; i < arr.length-1-j; i++) {
+//             if(arr[i]>arr[i+1]) [arr[i],arr[i+1]]=[arr[i+1],arr[i]];
+//         }
+//     }
+//     return(arr);
+// }
+// console.log(puzirok(A));
