@@ -3,7 +3,7 @@
 	<head>
 		<title>Cars</title>
 		<meta charset='utf-8'/>
-		<link rel="stylesheet" type="text/css" href="infoCars.css" />
+		<link rel="stylesheet" type="text/css" href="cars.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
 	<body>
@@ -23,7 +23,7 @@
 				<input type="button" id="addModel" value="Enter a new machine model" onclick = "createNewModel()"/>
 			</form>
         </div>
-		<div id="changeInfo">
+		 <div id="changeInfo">
 			<form>
 				<label>Machine model VIN.</label>
 				<input id="Vin" type="text" required />
@@ -44,7 +44,7 @@
 			<input type = "text" id = "nameProperty"  placeholder = "Enter property name" />
 			<input type = "submit" id = "searchValueProperty"  value = "Start search" onclick = "searchCarProperty()" />
 		</div>
-		<table id = "searchResult"></table>
-		<script src = "workWithDb.js"></script>
+		<table id = "searchResult"></table> 
+		<script src = "cars.js"></script>
 	</body>
 </html>
