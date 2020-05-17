@@ -9,28 +9,28 @@ app.use(bodyParser.json());
 const PORT = 8080;
 let cars = [
     {
-		"type": "Mercedes",
-		"model": "e300",
-		"color": "black",
-		"date": "1990",
-		"vin": "548762",
-		"accident": "flood"
+	"type": "Mercedes",
+	"model": "e300",
+	"color": "black",
+	"date": "1990",
+	"vin": "548762",
+	"accident": "flood"
 	},
 	{
         "type": "BMW",
         "model": "X6",
         "color": "white",
         "date": "2010",
-		"vin": "5478963",
-		"accident": "accident"
+	"vin": "5478963",
+	"accident": "accident"
         },
 	{
         "type": "Audi",
         "model": "a6",
         "color": "greeen",
         "date": "2005",
-		"vin": "214789",
-		"accident": "other"
+	"vin": "214789",
+	"accident": "other"
         },
 	{
         "type": "Opel",
@@ -53,15 +53,15 @@ let cars = [
         "model": "c200",
         "color": "red",
         "date": "1999",
-		"vin": "145789",
-		"accident": "other"
+	"vin": "145789",
+	"accident": "other"
         },
 	{
         "type": "Mercedes",
         "model": "ML500",
         "color": "blue",
         "date": "2011",
-		"vin": "967412",
+	"vin": "967412",
         "accident": "flood"
         },
 ];
