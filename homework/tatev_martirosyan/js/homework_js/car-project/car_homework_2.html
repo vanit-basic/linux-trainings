@@ -1,0 +1,177 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Search</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	<script>
+		let copy_page;
+		let apiCall = async (api) => { 
+		const apiRoot = 'https://localhost:8080';  
+		const request = `${apiRoot}${api}`;  
+		//console.log(request);  
+		let response = await fetch(request);  
+		let json = await response.json();
+		//console.log(json);
+		return json;
+		}
+		function submitHandler_1(event)
+		{
+			event.preventDefault();
+			validationSearch();
+		}
+		
+		function submitHandler(event)
+		{
+			event.preventDefault();
+			validationAdd();
+	
+		}
+		document.body.onload = () => print();
+		
+		function print ()
+		{
+			let allCars = apiCall('/car');
+			allCars.then(car=>{
+			for (let i = 0; i < car.length; i++)
+			createElem(car[i]);
+			});
+			copy_page=document.body.innerHTML;
+		}
+		
+		function createElem(obj){
+			const div= document.createElement('div');
+			const p = document.createElement('p');
+			p.innerHTML ="Car name: "+obj.name+"<br>Color: "+obj.color+"<br>Date of issue: "+obj.year+"<br> Vin: "+obj.vin;
+			div.appendChild(p);
+			document.getElementById('conteiner').appendChild(div);
+			document.body.appendChild(document.getElementById('conteiner'));
+			copy_page=document.body.innerHTML;
+		}
+		
+		
+		function createCars(name,color,year,vin)
+		{
+			let obj={
+				name:name,
+			    color:color,
+			    year:year,
+			    vin: vin
+			}
+		//cars.push(obj);
+		createElem(obj);
+		}
+		
+		
+		function searchCarVin(a)
+		{
+			let result = apiCall(`/car/:${a}`);
+			result.then(value=>f(value));
+		}
+		function searchCarYear(a)
+		{
+			let result = apiCall(`/car?year=${a}`);
+			result.then(value=>f(value));
+		}
+		function searchCarColor(a)
+		{
+			let result = apiCall(`/car?color=${a}`);
+			result.then(value=>f(value));
+		}
+		function searchCarName(a)
+		{
+			let result = apiCall(`/car?name=${a}`);
+			result.then(value=>f(value));
+		}
+		
+		function f(value)
+		{
+			if(isEmpty(value))
+				{
+					conteiner.innerHTML=value.name+"<br>"+value.color+"<br>"+value.year+"<br>"+value.vin;
+					document.body.appendChild(conteiner);
+				}
+				else
+				{
+					conteiner.innerHTML="Nothing found to display";
+					document.body.appendChild(conteiner);
+				}
+		}
+		
+		
+		function isEmpty(obj) 
+		{
+			for(let key in obj)
+			return true;
+    
+			return false;
+		}
+		function validationAdd()
+		{
+			let nameCar=document.getElementById('carName').value.trim();
+			let colorCar=document.getElementById('carColor').value.trim();
+			let yearCar=document.getElementById('carYear').value.trim();
+			let vinCar=document.getElementById('carVin').value.trim();
+
+			if (nameCar && colorCar && yearCar && vinCar) 
+			{
+				createCars(nameCar, colorCar, yearCar, vinCar);
+				return;
+			}
+			else{
+				alert("Enter all fields");
+				return;
+				}
+		}
+		
+		function validationSearch()
+		{
+			let nameSearchCar=document.getElementById('1').value.trim();
+			let colorSearchCar=document.getElementById('2').value.trim();
+			let yearSearchCar=document.getElementById('3').value.trim();
+			let vinSearchCar=document.getElementById('4').value.trim();
+			if(nameSearchCar==""&&colorSearchCar==""&&yearSearchCar=="")
+			searchCarVin(vinSearchCar);
+			else
+			{
+				if(nameSearchCar==""&&colorSearchCar==""&&vinSearchCar=="")
+				searchCarYear(yearSearchCar);
+				else
+				{
+					if(nameSearchCar==""&&yearSearchCar==""&&vinSearchCar=="")
+					searchCarColor(colorSearchCar);
+					else
+					{
+						if(colorSearchCar==""&&yearSearchCar==""&&vinSearchCar=="")
+						searchCarName(nameSearchCar);
+					}
+				}
+			}
+		}
+				
+	</script>
+	<div>
+	<label>Add new car</label><br>
+	<form class="form_1" onsubmit="submitHandler(event)">
+	<input type="text" id="carName" placeholder="Enter car name"/><br>
+	<input type="text" id="carColor" placeholder="Enter car color"/><br>
+	<input type="text" id="carYear" placeholder="Enter date of issue"/><br>
+	<input type="text" id="carVin" placeholder="Enter vin"/><br>
+	<input type="submit" id="btn" value="Add new car"/>
+	<br>
+	</form>
+	</div>
+	<form onsubmit="submitHandler_1(event)">
+	<label>Search cars</label><br>
+	<input type="text" id="1" placeholder="Search car at name">
+	<input type="text" id="2" placeholder="Search car at color">
+	<input type="text" id="3" placeholder="Search car at year">
+	<input type="text" id="4" placeholder="Search car at vin">
+	<input type="submit" value="search"/>
+	</form>
+	<div id="conteiner">
+	</div>
+		
+	</body>
+</html>
