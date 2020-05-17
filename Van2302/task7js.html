@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>tvanshanneri gumar</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	<script>
+	function Summa (a)
+	{
+	let p = a.reduce((sum,value)=>{
+	while(value!=0)
+	{
+		sum=sum+value%10;
+		value=Math.trunc(value/10);
+	}
+	return sum;
+	}, 0);
+	return p;
+	}
+	
+	function test(input, exp)
+	{
+		let actual=Summa(input);
+		if(actual===exp)
+		console.log("Yes");
+		else
+		console.log("No");
+		
+	}
+
+	test([10, 20, 30, 40, 50, 23, 41],25);
+	test([33,22],10);
+	
+	</script>
+	</body>
+	</html>
+	
