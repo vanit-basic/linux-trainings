@@ -43,7 +43,7 @@ let apiCall = async (api) => {
   console.log(request);
   let response = await fetch(request);
   let json = await response.json();
-  return json;
+  console.log(json);
 }
 
 let allCars = apiCall('/CarsList');

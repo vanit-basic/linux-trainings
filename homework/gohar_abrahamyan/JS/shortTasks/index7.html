@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <title>Task 7</title>
+    </head>
+    <body>
+
+
+        <script>
+           function sum(array){
+               let nums = array.join("")
+               .split('')
+               let sum = 0
+               for(let i =0; i<nums.length; i++) {
+                   nums[i]= Number(nums[i])
+                   sum +=nums[i]
+               }
+               console.log(sum)
+           }
+           let newarr = [1,12,3,22]
+           sum(newarr)
+        </script>
+    </body>
+</html>

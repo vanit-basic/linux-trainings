@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <title>Task 2</title>
+    </head>
+    <body>
+
+
+        <script>
+            function isAnagrama(word1,word2) {
+                let result1=word1.split('').sort().join('')
+                let result2=word2.split('').sort().join('')
+                if (result1===result2) {
+                    console.log("This words are anagramas")
+                }
+                else {
+                    console.log("This words aren't anagramas")   
+                } 
+            }
+            
+            isAnagrama("lenin", "ninel")
+            isAnagrama("three", "car")
+        </script>
+    </body>
+</html>

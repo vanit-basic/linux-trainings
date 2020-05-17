@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <title>Task 1</title>
+    </head>
+    <body>
+
+
+        <script>
+            function isPalindrom(word) {
+                let wordRevers =word.split('').reverse().join('')
+                if (word===wordRevers) {
+                    console.log("This word is palindrom")
+                }
+                else {
+                    console.log("This word isn't palindrom")   
+                } 
+            }
+            
+            isPalindrom("sos")
+            isPalindrom("home")
+        </script>
+    </body>
+</html>
