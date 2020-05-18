@@ -1,0 +1,110 @@
+<!--xndir1 palindrom>
+let arr="qaxaq";
+let scope1=true;
+let scope=true;
+let num=Math.trunc(arr.length/2);//2
+let num1=arr.length-1;//4
+let i,j;
+for(i=0,j=num1;i<num,j>num;i++,j--){
+	if(arr[i]==arr[j]){scope=true;}
+	else{scope=false;}
+	scope1=scope1&&scope;
+}	 
+if(scope1){console.log("palindrom e");}
+else{console.log("palindrom che");}
+<!--xndir1 palindrom>
+
+<!--xndir7>
+ let mas =[12, 34];
+ let value=0;
+ let num1,num2;
+ for(let i=0;i<mas.length;i++){
+    num1=Math.trunc(mas[i]/10);
+    num2=mas[i]%10;
+    value+=num1+num2;
+}console.log(value);
+<!--xndir7>
+
+<!--xndir8>
+let arr=[ 4, 7, 10, 11, 13 ];
+let newarr = [];
+for(let i=0;i<arr.length;i++){
+   if(arr[i]%2!=0){
+   newarr.push(arr.indexOf(arr[i]));
+   }
+}console.log(newarr);
+<!--xndir8>
+
+<!--xndir9>
+let arr = [1,4,6,3,2,7];
+let num=arr.length;
+let cast=0;
+for(let  i=0;i<num;i++){
+   for(let j=0;j<num;j++){
+     if(arr[j]>arr[j+1]){
+     cast=arr[j+1];
+     arr[j+1]=arr[j];
+     arr[j]=cast;
+     }
+   }num--;
+}console.log(arr);
+<!--xndir9>
+<!--xndir10>
+ <!DOCTYPE HTML>
+
+<html>
+<head>
+</head>
+<body>
+<div class="center" style="margin-left:530px">
+<div class="back"style="background-color:yellow;padding:50px;width:115px">
+   <div class="arajitox"style="display:flex;">
+     <input type="text" class="a00" style="width:30px;height:30px;"></input></br>
+     <input type="text" class="a01" style="width:30px;height:30px;"></input></br>
+     <input type="text" class="a02" style="width:30px;height:30px;"></input></br>
+   </div>
+   <div class="erkrordtox"style="display:flex;">
+     <input type="text" class="a10" style="width:30px;height:30px;"></input></br>
+     <input type="text" class="a11" style="width:30px;height:30px;"></input></br>
+     <input type="text" class="a12" style="width:30px;height:30px;"></input></br>
+   </div>
+   <div class="chorordtox"style="display:flex;">
+     <input type="text" class="a20" style="width:30px;height:30px;"></input></br>
+     <input type="text" class="a21" style="width:30px;height:30px;"></input></br>
+     <input type="text" class="a22" style="width:30px;height:30px;"></input></br>
+   </div> <button class="one"onclick="button1"style="margin-left:28px;margin-top:5px">button</button></br>
+   </div>
+ </div>      
+
+ <script>
+  let name00=document.querySelector('.a00');
+  let name01=document.querySelector('.a01');
+  let name02=document.querySelector('.a02');
+  let name10=document.querySelector('.a10');
+  let name11=document.querySelector('.a11');
+  let name12=document.querySelector('.a12');
+  let name20=document.querySelector('.a20');
+  let name21=document.querySelector('.a21');
+  let name22=document.querySelector('.a22');
+  let button1=document.querySelector('.one');
+
+button1.onclick=function myFunction(){
+if((name00.value==name01.value)&&(name01.value==name02.value)){
+alert("haxtec "+name00.value);
+}else if((name01.value==name11.value)&&(name11.value==name12.value)) {
+alert("haxtec "+name01.value);
+}else if((name20.value==name21.value)&&(name21.value==name22.value)) {
+alert("haxtec "+name20.value);
+}else if((name00.value==name10.value)&&(name10.value==name20.value)) {
+alert("haxtec "+name00.value);
+}else if((name01.value==name11.value)&&(name11.value==name21.value)) {
+alert("haxtec "+name01.value);
+}else if((name02.value==name12.value)&&(name12.value==name22.value)) {
+alert("haxtec "+name02.value);
+}else if((name00.value==name11.value)&&(name11.value==name22.value)) {
+alert("haxtec "+name00.value);
+}else if((name02.value==name11.value)&&(name11.value==name20.value)) {
+alert("haxtec "+name02.value);
+}else{console.log("der haxtox chka");}
+}
+<!--xndir10>
