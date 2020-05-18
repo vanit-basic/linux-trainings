@@ -19,7 +19,7 @@
 	return p;
 	}
 	
-	function test(input, exp)
+	let test = (input, exp) =>
 	{
 		let actual=letSum(input);
 		if(actual===exp)
@@ -28,11 +28,10 @@
 		console.log("ERROR");
 		
 	}
-	//console.log(letSum([1, 9, 91, 27, 12, 83, 29]));
-	//console.log(letSum([12,34]));
 	test([1, 9, 91, 27, 12, 83, 29],54);
 	test([12,34],10);
-	
+	test([],0);
+	test([10,110,11,12],8);
 	</script>
 	</body>
 	</html>
