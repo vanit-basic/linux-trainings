@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title></title>
+		<meta charset='UTF-8'>
+	</head>
+        <body>
+	<script>
+		//task1
+		function palindrome(word) {
+		let result = "NO!"	
+		let wordsReverse = word.split("").reverse().join("");
+			if (word == wordsReverse){   
+				 result = "YES!";}
+			return result;
+		}
+                console.log(palindrome("bla"));
+
+                //task_2
+                function anagrama(word1,word2){
+		let result = "NO!";	
+                let arr1 = word1.split("").sort();
+		let arr2 = word2.split("").sort();
+			if (arr1.length === arr2.length && arr1.every(function(value, index) { 
+				return value === arr2[index]})){
+			result = "YES!";
+			}	
+			return result;
+ 		}
+                console.log(anagrama("labo","balp"));
+              
+                //task_3
+                  let ar = [12,23,25];
+                function sumOfNumbers(arr){
+		 let str = arr.join("");
+		 let newArray = str.split("").map(Number);
+		 return  newArray.reduce((sum,num) => sum + num, 0);
+		  }
+                 console.log(sumOfNumbers(ar));
+
+                //task4
+                function getIndexOfOddNums(arr){
+		let result = [];	
+			for (let num of arr){
+				if (num % 2 != 0 && arr.indexOf(num) != -1){
+				let idx = arr.indexOf(num);
+				result.push(idx);
+				idx = arr.indexOf(num, idx+1)	
+				}
+			} return result;
+	         
+                }
+                console.log(getIndexOfOddNums(ar));
+
+                //task_5
+                function bubbleSort(arr){
+                let len = arr.length;
+                  for (let i = 0; i < len; i++) {
+                     for (let j = 0; j < len; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                          let tmp = arr[j];
+                          arr[j] = arr[j + 1];
+                          arr[j + 1] = tmp;
+                        }
+                     }
+                  }
+                return arr;
+                };
+               console.log(bubbleSort([1,5,3,4,7,2]))
+                
+                
+	</script>
+	</body>
+</html>
