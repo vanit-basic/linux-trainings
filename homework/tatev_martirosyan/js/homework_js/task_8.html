@@ -6,19 +6,47 @@
 	</head>
 	<body>
 	<script>
-	function parz (a)
+	let parz= (a)=>
 	{
-	let newArr=[];
-	a.forEach((value,index,arr)=>{
-	s=0;
-	for(let i=2;i<value;i++)
-	{if(value%i==0)
-	s++;}
-	if(s==0)
-	newArr.push(index);
-	});
-	return newArr;}
-	console.log(parz([3,4,9,12,17,21,22]));
+		let newArr=[];
+		a.forEach((value,index,arr)=>{
+		s=0;
+		for(let i=2;i<value;i++)
+		{
+			if(value%i==0)
+			s++;
+		}
+		if(s==0&&value!=1)
+		newArr.push(index);
+		});
+		return newArr;
+	}
+		
+		
+	function test (a, exp)
+	{
+		let actual=parz(a);
+		console.log(actual);
+		if(actual.length===exp.length)
+		{
+			for(let i=0; i < actual.length; i++)
+			{ 
+				if(actual[i]!=exp[i])
+				{
+					console.log("error");
+					return;
+				}
+			}
+		}else
+		{
+			console.log("error");
+			return;
+		}
+	console.log("Ok");
+	}
+	test([3,4,9,12,17,21,22],[0,4]);
+	test([8,10,9,1,12,33],[]);
+	
 	</script>
 	</body>
 	</html>
