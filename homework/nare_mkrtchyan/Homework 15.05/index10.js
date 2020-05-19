@@ -20,4 +20,6 @@ let submitHandler = (event) => {
     test(getElem("r1d3"),getElem("r2d3"),getElem("r3d3"));
     test(getElem("r1d1"),getElem("r2d2"),getElem("r3d3"));
     test(getElem("r1d3"),getElem("r2d2"),getElem("r3d1"));
+	if(document.getElementById("answer").innerHTML == ''){
+		return document.getElementById("answer").innerHTML = "Draw!";}
 }
