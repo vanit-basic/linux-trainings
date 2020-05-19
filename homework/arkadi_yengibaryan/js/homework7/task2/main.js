@@ -1,49 +1,43 @@
-// function checkAnagrammatic(str1, str2) {
-//     if (str1.length != str2.length) {
-//         return 'no';
-//     }
-
-//     let arr1 = str1.split('');
-//     let arr2 = str2.split('');
-
-//     for (let i = 0; i < arr1.length; i++) {
-//         for (let j = 0; j < arr2.length; j++) {
-//             if (arr1[i] == arr2[j]) {
-//                 delete arr2[j];
-//                 break;
-//             }
-//         }
-//     }
-
-//     return checkArrElems(arr2);
-
-// }
-
-// function checkArrElems(arr) {
-//     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i]) {
-//             return 'no';
-//         }
-//     }
-
-//     return 'yes';
-// }
-
-// let str1 = 'abcdgv';
-// let str2 = 'vbcdag';
-
-// console.log(checkAnagrammatic(str1, str2));
-
-
-/////// v 2
-
-let str1 = 'abcdgv1';
-let str2 = '1vbcdag';
-
-function checkAnagrammatic(str1, str2) {
-    if (str1.length != str2.length) return 'No';
-    if (str1.toLowerCase().split('').sort().join('') == str2.toLowerCase().split('').sort().join('')) return 'Yes';
+let checkType = (elem1, elem2) => {
+    if ((typeof elem1 == 'string' || typeof elem1 == 'number') &&
+        (typeof elem2 == 'string' || typeof elem2 == 'number')) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-console.log(checkAnagrammatic(str1, str2));
-console.log('AAA'.toLowerCase());
+let checkAnagrammatic = (str1, str2) => {
+    if (!checkType(str1, str2)) return false;
+    if (typeof str1 == 'number') str1 = String(str1);
+    if (typeof str2 == 'number') str2 = String(str2);
+    if (str1.length != str2.length) return false;
+
+    if (str1.toLowerCase().split('').sort().join('') == str2.toLowerCase().split('').sort().join('')) {
+        return true;
+    }
+
+    return false;
+}
+
+let str1 = '12AA1cd';
+let str2 = 'DA12c1A';
+
+if (checkAnagrammatic(str1, str2)) {
+    console.log('Yes');
+} else {
+    console.log('No');
+}
+
+let testAnagrammatic = (current, check, expected) => {
+    let actual = checkAnagrammatic(current, check);
+    if (expected != actual) {
+        console.error(`For values ${current}-${check}, the test is fail`);
+    }
+}
+
+testAnagrammatic('aabbcc', 'cbabac', true);
+testAnagrammatic(123321, '113232', true);
+testAnagrammatic('0', 0, true);
+testAnagrammatic('', '', true);
+testAnagrammatic('-@A@c@C', 'a@@C@c-', true);
