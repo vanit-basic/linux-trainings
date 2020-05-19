@@ -1,0 +1,44 @@
+ * {
+	padding: 0;
+	margin: 0;
+}
+body {
+    background: rgb(28, 121, 230);
+}
+#game {
+    background: #27b981;
+	width: 580px;
+	height: 580px;
+	margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.item {
+    flex-basis:180px;
+    display: inline-block;
+    height: 180px;
+    line-height: 180px;
+    text-align: center;
+    font-size: 180px;
+    background: #ffffff;
+    align-self: center;
+}
+.player1 {
+    background: #000000;
+    color:yellow;
+}
+.player2 {
+    background: yellow;
+    color:blue;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+  td{
+      width: 60px;
+      height: 60px;
+      background: white;
+      text-align: center;
+  }
