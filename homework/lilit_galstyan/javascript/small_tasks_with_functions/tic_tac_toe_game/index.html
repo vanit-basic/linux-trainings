@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> tic-tac-toe game </title>
+		<meta charset="UTF-8">
+              
+                <style>
+                   .main{
+                     width: 310px;  
+                     margin-left: 44%;
+                     overflow: hidden;	    
+                     box-sizing:border-box;	  
+                   }
+
+                  .box{
+                    float: left;
+                    width:100px;	
+                    height:100px;
+                    font-size:85px ;
+                    text-align: center;	
+                    border: 1px solid black	
+                   }
+
+		   #button{
+	 	    margin-left: 35%;
+		    margin-top:10%	
+		   }
+		</style>
+	</head>
+	<body>
+          <div class="main" id="main">
+          <div class="box" id="box1" onclick="showSymbol('box1')" ></div>
+          <div class="box" id="box2" onclick="showSymbol('box2')"></div>
+          <div class="box" id="box3" onclick="showSymbol('box3')"></div>
+          <div class="box" id="box4" onclick="showSymbol('box4')"></div>
+          <div class="box" id="box5" onclick="showSymbol('box5')"></div>
+	  <div class="box" id="box6" onclick="showSymbol('box6')"></div>
+          <div class="box" id="box7" onclick="showSymbol('box7')"></div>
+          <div class="box" id="box8" onclick="showSymbol('box8')" ></div>
+          <div class="box" id="box9" onclick="showSymbol('box9')"></div>
+		  <button id="button"  onClick="window.location.reload();"> Play again </button> 
+		  </div>
+	<script>
+		function selectWinnerBoxes(one,two,three){
+		one.style.background = "rgb(76,175,80)";
+		two.style.background = "rgb(76,175,80)";
+		three.style.background = "rgb(76,175,80)";
+		}
+	
+		function getWinner(){
+		 
+			let box1 = document.getElementById("box1");
+			let box2 = document.getElementById("box2");
+			let box3 = document.getElementById("box3");
+			let box4 = document.getElementById("box4");
+			let box5 = document.getElementById("box5");
+			let box6 = document.getElementById("box6");
+			let box7 = document.getElementById("box7");
+			let box8 = document.getElementById("box8");
+			let box9 = document.getElementById("box9");
+		   
+		  if (box1.innerHTML !== "" && box1.innerHTML == box2.innerHTML &&  box1.innerHTML == box3.innerHTML)
+				selectWinnerBoxes(box1,box2,box3);
+                  else  if (box1.innerHTML !== "" && box1.innerHTML == box5.innerHTML && box1.innerHTML == box9.innerHTML)
+			        selectWinnerBoxes(box1,box5,box9);
+                  else  if (box3.innerHTML !== "" && box3.innerHTML == box5.innerHTML && box3.innerHTML == box7.innerHTML)
+			        selectWinnerBoxes(box3,box5,box7);
+                  else  if (box3.innerHTML !== "" && box3.innerHTML == box6.innerHTML && box3.innerHTML == box9.innerHTML)
+			        selectWinnerBoxes(box3,box6,box9);
+                  else  if (box2.innerHTML !== "" && box2.innerHTML == box5.innerHTML && box2.innerHTML == box8.innerHTML)
+			        selectWinnerBoxes(box2,box5,box8);
+                  else  if (box1.innerHTML !== "" && box1.innerHTML == box4.innerHTML && box1.innerHTML == box7.innerHTML)
+			        selectWinnerBoxes(box1,box4,box7);
+                  else  if (box4.innerHTML !== "" && box4.innerHTML == box5.innerHTML && box4.innerHTML == box6.innerHTML)
+			        selectWinnerBoxes(box4,box5,box6);
+                  else  if (box7.innerHTML !== "" && box7.innerHTML == box8.innerHTML && box7.innerHTML == box9.innerHTML)
+			        selectWinnerBoxes(box7,box8,box9);
+		}
+                  let player1 = "X";
+                  let player2 = "O";  
+                  let turn = 0;
+
+                  function showSymbol(id) {
+		    if (turn % 2 == 0){
+		    document.getElementById(id).innerHTML = "X";
+		    } 	  else 
+                  document.getElementById(id).innerHTML = "O";
+		   getWinner();	  
+		   turn++;
+                  } ;
+	</script>
+	
+	</body>
+</html>
+

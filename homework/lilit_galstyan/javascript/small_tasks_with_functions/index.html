@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title></title>
+		<meta charset='UTF-8'>
+	</head>
+        <body>
+	<script>
+		//task1
+		let palindrome = (word) => {
+		let result = "false"	
+		let wordsReverse = word.split("").reverse().join("");
+			if (word == wordsReverse){   
+				 result = "true";}
+			return result;
+		}
+                console.log(test(palindrome("lol"),"true"));
+
+                //task_2
+                let anagrama = (word1,word2) => {
+		let result = "false";	
+                let arr1 = word1.split("").sort();
+		let arr2 = word2.split("").sort();
+			if (arr1.length === arr2.length && arr1.every(function(value, index) { 
+				return value === arr2[index]})){
+			result = "true";
+			}	
+			return result;
+ 		}
+                console.log(test(anagrama("abcd","cabd"),"true"))                
+
+                //task_3
+                  let ar = [12,23,25];
+                 let sumOfNumbers = (arr) => {
+		 let str = arr.join("");
+		 let newArray = str.split("").map(Number);
+		 return  newArray.reduce((sum,num) => sum + num, 0);
+		  }
+                 console.log(test(sumOfNumbers([11,25,10]),10));                 
+
+                //task4
+                let getIndexOfOddNums = (arr) => {
+		let result = [];	
+			for (let num of arr){
+				if (num % 2 != 0){
+				let idx = arr.indexOf(num);
+				result.push(idx);
+				}
+			} return result;
+	         
+                }
+                console.log(testForArrayAnswers(getIndexOfOddNums([1,2,3,4,5]), [0,2,4]));
+
+                //task_5
+                let  bubbleSort = (arr) =>{
+                let len = arr.length;
+                  for (let i = 0; i < len; i++) {
+                     for (let j = 0; j < len; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                          let tmp = arr[j];
+                          arr[j] = arr[j + 1];
+                          arr[j + 1] = tmp;
+                        }
+                     }
+                  }
+                return arr;
+                };
+               console.log(testForArrayAnswers(bubbleSort([3,2,5]),[2,3,5]));
+                
+               //tests
+   
+                function testForArrayAnswers( actual, expected){
+	         if  (expected.length === actual.length && expected.every(function(value, index) { 
+				return value === actual[index]})){
+	          console.log("true");
+	         } else { 
+	         console.log("false")
+	         }
+	       }
+               
+                function test( actual, expected)  {
+	           if (expected === actual){
+	            console.log("true");
+	           } else { 
+	             console.log("false")
+	          }
+	        }    
+	</script>
+	</body>
+</html>
