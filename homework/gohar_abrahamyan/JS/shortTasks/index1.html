@@ -8,18 +8,38 @@
 
 
         <script>
-            function isPalindrom(word) {
-                let wordRevers =word.split('').reverse().join('')
-                if (word===wordRevers) {
-                    console.log("This word is palindrom")
+            let isPalindrom = (word) => {
+                let wordRevers =word.split('').reverse().join('').trim()
+                if (word!==wordRevers || word == '') {
+                    return false
                 }
-                else {
-                    console.log("This word isn't palindrom")   
-                } 
+                return true 
+                 
             }
-            
-            isPalindrom("sos")
-            isPalindrom("home")
+            let isPalindromTest1 = () => {
+                let word = 'sos'
+                let result = isPalindrom(word)
+                if(result) {
+                    console.log("This word is Palindrom")
+                }
+            }
+            let isPalindromTest2 = () => {
+                let word = 'home'
+                let result = isPalindrom(word)
+                if(!result) {
+                    console.log("This word is not Palindrom")
+                }
+            }
+            let isPalindromTest3 = () => {
+                let word = ' '
+                let result = isPalindrom(word)
+                if(!result) {
+                    console.log("There isn't any word")
+                }
+            }
+            isPalindromTest1()
+            isPalindromTest2()
+            isPalindromTest3()
         </script>
     </body>
 </html>

@@ -8,19 +8,41 @@
 
 
         <script>
-            function isAnagrama(word1,word2) {
+            let isAnagrama = (word1,word2) => {
                 let result1=word1.split('').sort().join('')
                 let result2=word2.split('').sort().join('')
-                if (result1===result2) {
-                    console.log("This words are anagramas")
+                if (result1!==result2 || result1 ==="" || result2 ==="") {
+                    return false
                 }
-                else {
-                    console.log("This words aren't anagramas")   
-                } 
+                return true
             }
-            
-            isAnagrama("lenin", "ninel")
-            isAnagrama("three", "car")
+            let isAnagramaTest1 = () => {
+                let word1 = 'ninel'
+                let word2 = 'lenin'
+                let result = isAnagrama(word1, word2)
+                if(result) {
+                    console.log("This words are Anagramas to each other")
+                }
+            }
+            let isAnagramaTest2 = () => {
+                let word1 = 'car'
+                let word2 = 'three'
+                let result = isAnagrama(word1, word2)
+                if(!result) {
+                    console.log("This words aren't Anagramas to each other")
+                }
+            }
+            let isAnagramaTest3 = () => {
+                let word1 = 'antananarivu'
+                let word2 = ' '
+                let result = isAnagrama(word1, word2)
+                if(!result) {
+                    console.log("one of this words is empty")
+                }
+            }
+            isAnagramaTest1()
+            isAnagramaTest2()
+            isAnagramaTest3()
         </script>
     </body>
 </html>
