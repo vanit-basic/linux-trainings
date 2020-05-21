@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cars</title>
+		<meta charset='utf-8'/>
+		<link rel="stylesheet" type="text/css" href="cars.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+		<table id = 'origin'></table>
+		<div class="addNewCar">
+			<form>
+				<label>Machine model VIN.</label>
+				<input id="newVin" type="text" required />
+				<label>Please enter a machine model.</label>
+				<input id="newModel" type="text" required />
+				<label>Machine model year.</label>
+				<input id="newYear" type="text" required />
+				<label>Machine model color.</label>
+				<input id="newColor" type="text" required />
+				<label>Incidents whit this machine.</label>
+				<input id="newIncident" name = "newIncident" required />
+				<input type="button" id="addModel" value="Enter a new machine model" onclick = "createNewModel()"/>
+			</form>
+        </div>
+		 <div id="changeInfo">
+			<form>
+				<label>Machine model VIN.</label>
+				<input id="Vin" type="text" required />
+				<label>Please enter a machine model.</label>
+				<input id="Model" type="text" required />
+				<label>Machine model year.</label>
+				<input id="Year" type="text" required />
+				<label>Machine model color.</label>
+				<input id="Color" type="text" required />
+				<label>Incidents whit this machine.</label>
+				<input id="Incident" name = "newIncident" required />
+				<input type="button" id="Model" value="Enter a new machine model" onclick = "changeCar()" />
+			</form>
+        </div>
+		<div class = "divClass">
+			<h3> Property names - vin,model,year,color,incident</h3>
+			<input type = "text" id = "valueProperty" placeholder = "Enter property" />
+			<input type = "text" id = "nameProperty"  placeholder = "Enter property name" />
+			<input type = "submit" id = "searchValueProperty"  value = "Start search" onclick = "searchCarProperty()" />
+		</div>
+		<table id = "searchResult"></table> 
+		<script src = "cars.js"></script>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+table {
+	
+	border-collapse:collapse;
+}
+td,th {
+	border:2px solid ;
+	width:15%;
+	height:4%;
+	text-align:center;
+	
+}
+
+.divClass{
+	display:inline-block;
+	width:25%;
+	
+}
+div.divClass > input {
+	display:block;
+	margin:5%;
+	width:100%;
+}
+#searchValueProperty {
+	width:100%;
+}
+div#changeInfo > form > input,label{
+	display:block;
+	margin:1%;
+	width:100%;
+}
+
+div.addNewCar > form >  label{
+	display:block;
+	text-align:center;
+}
+div.addNewCar > form{	
+	width:25%;
+}
+div.addNewCar > form > input{
+	display:block;
+	width:100%;
+	margin:1%;
+	
+}
+input[type = "submit"]{
+	width:100%;
+	background-color:#3B5998;
+	border:none;
+	color:white;
+	cursor:pointer;
+	margin:0%;
+}
+#changeInfo { 
+	text-align: center-right;
+    display: none;
+    z-index: 10;
+    background: greenyellow;
+    position: absolute;
+    padding: 1em;
+    width:30%;
+    top: 30%;
+	right:0%;
+}

@@ -1,0 +1,64 @@
+		.modal {
+				background: #ededed;
+				position: absolute;
+				border: 1px solid;
+				padding: 2em;
+				z-index: 10;
+				left: 30%;
+				top: 30%;
+				border-radius: 20px;
+				display: none;
+			}
+		form {
+			padding-top:1em;
+			margin-top:14px;
+
+			padding-bottom:20px;
+			display:inline-block;
+			float:right;
+			width:25%;
+			background-color:#EEEFF2;
+			margin-right:40%;
+			height:13em;
+			
+		}
+		.son {
+			margin-left:6%;
+			margin-bottom:1%;
+			margin-top:2%;
+			width:310px;
+		}
+		.daughter {
+			margin-left:6%;
+			font-weight:bold;
+			font-family:LucidaGrande;
+			
+		}
+		input[type="submit"] {
+			margin-left:6%;
+			background-color:#3B5998;
+			border:none;
+			border-radius:2px;
+			height:25px;
+			font-family:LucidaGrande;
+			color:white;
+			cursor: pointer;
+			width: 85%;
+		}
+		h2 {
+		    text-align:center;
+			color :#3B5998;
+			margin-right:5%;
+		}
+		body {
+			background-color: #333333;
+		}
+		.body {
+			position: relative;
+			margin-top: 50px; 
+			padding: 40px 0px 40px 0px;
+			text-align: center; font-weight: bold; color: white;
+			clip-path:polygon(50% 0%,100% 100%,50% 100%,0% 100%);
+			background-color: #88B7D5;
+			border: 6px solid #C2E1F5;
+		}
